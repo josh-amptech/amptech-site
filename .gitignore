@@ -36,6 +36,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+# AWS Amplify
+amplify_outputs.json
+.amplify-hosting
+
+# Claude Code
+.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
