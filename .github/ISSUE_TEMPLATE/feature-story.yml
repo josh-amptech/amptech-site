@@ -1,0 +1,67 @@
+name: Feature Story
+description: Define a user story using Example Mapping before implementation begins
+title: "[Story]: "
+labels: ["story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use [Example Mapping](https://cucumber.io/blog/bdd/example-mapping-introduction/) to fully specify this story before dev starts. Red questions should be resolved (or explicitly deferred) before picking this up.
+
+  - type: textarea
+    id: story
+    attributes:
+      label: "Story (Yellow)"
+      description: "Complete the user story statement."
+      placeholder: "As a [persona], I want [goal] so that [outcome]."
+    validations:
+      required: true
+
+  - type: textarea
+    id: rules
+    attributes:
+      label: "Rules (Blue) — Acceptance Criteria"
+      description: "Each rule is an atomic, testable constraint. One rule per line."
+      placeholder: |
+        - The form validates email format before submission
+        - A confirmation message is shown on success
+        - Error messages appear inline, not in a modal
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: "Examples (Green) — Concrete Scenarios"
+      description: "Illustrate each rule with at least one scenario. Group by rule. Use Given/When/Then."
+      placeholder: |
+        **Rule: email validation**
+        - Given I enter "notanemail" → I see "Please enter a valid email"
+        - Given I enter "user@example.com" → the form proceeds to submit
+
+        **Rule: success confirmation**
+        - Given all fields are valid → I see "Thanks, we'll be in touch within 24 hours"
+    validations:
+      required: true
+
+  - type: textarea
+    id: questions
+    attributes:
+      label: "Questions (Red) — Open Unknowns"
+      description: "Unresolved questions. Each should become a decision or follow-up issue before dev starts."
+      placeholder: |
+        - What happens if the email service is down at submission time?
+        - Should we rate-limit submissions to prevent spam?
+    validations:
+      required: false
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: "Out of Scope"
+      description: "Explicitly list what this story does NOT include. Prevents scope creep."
+      placeholder: |
+        - Multi-step form wizard
+        - File attachments
+    validations:
+      required: false
