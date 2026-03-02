@@ -65,6 +65,52 @@ Never use: "revolutionary," "cutting-edge," "innovative," "game-changing," "leve
 
 **Copy:** Verbatim in `components/sections/` — do not rewrite unless explicitly asked.
 
+## Workflow — Spec-Driven Development
+
+**Every feature starts as a spec. No exceptions — including "quick" changes.**
+
+### Steps (never skip)
+
+1. **Idea → Issue.** Before any code, create a GitHub issue.
+   - Vague or large initiative → `epic` (use Epic template, then break into stories)
+   - Concrete deliverable → `story` (use Feature Story template)
+   - Something broken → `bug` (use Bug Report template)
+
+2. **Groom the story** with the user before touching code:
+   - Rules are atomic and testable (each maps to 1+ examples)
+   - Examples cover happy path and key edge cases
+   - All Questions are answered or explicitly deferred with a decision
+   - Out of Scope is confirmed to prevent creep
+   - Move issue to **Ready** in the GitHub Project when grooming is complete
+
+3. **Branch off main.**
+   ```
+   git checkout -b feat/123-short-description
+   ```
+
+4. **Implement against the spec.** Rules = acceptance criteria. Stop if you hit an unresolved Question — surface it to the user, do not assume.
+
+5. **PR with `Closes #123`.** Title follows conventional commits. Fill out the PR checklist.
+
+### Claude must
+
+- **Always** create a GitHub issue before writing any code
+- **Always** walk through Rules, Examples, and Questions with the user before marking a story Ready
+- **Always** create a feature branch before implementation (`git checkout -b type/N-description`)
+- **Always** include `Closes #N` in PR descriptions
+- **Never** commit directly to `main`
+- **Never** assume an answer to an unresolved Question — ask the user
+- **Never** expand scope mid-implementation; open a new issue instead
+
+### Branch naming
+
+| Work type | Pattern | Example |
+|---|---|---|
+| Feature | `feat/N-description` | `feat/12-contact-form-email` |
+| Bug fix | `fix/N-description` | `fix/15-nav-mobile-close` |
+| Chore | `chore/N-description` | `chore/8-upgrade-nextjs` |
+| Refactor | `refactor/N-description` | `refactor/20-extract-button` |
+
 ## Git Conventions
 
 Use **conventional commits** for all commit messages:
