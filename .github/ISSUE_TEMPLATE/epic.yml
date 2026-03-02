@@ -1,0 +1,39 @@
+name: Epic
+description: A large initiative to be broken down into stories before any work begins
+title: "[Epic]: "
+labels: ["epic"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: "Goal"
+      description: "What outcome does this epic deliver? One or two sentences max."
+    validations:
+      required: true
+
+  - type: textarea
+    id: stories
+    attributes:
+      label: "Stories"
+      description: "Break this down into individual story issues. Link them with #number as you create each one."
+      placeholder: |
+        - [ ] #0 As a visitor, I want...
+        - [ ] #0 As a visitor, I want...
+    validations:
+      required: false
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: "Out of Scope"
+      description: "What does this epic explicitly NOT include?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: open_questions
+    attributes:
+      label: "Open Questions"
+      description: "High-level unknowns to resolve during story grooming — before any story is marked Ready."
+    validations:
+      required: false
