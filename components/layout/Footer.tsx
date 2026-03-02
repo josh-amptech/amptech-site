@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,8 +8,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Logo + tagline */}
           <div>
-            <p className="text-xl font-bold tracking-tight">AMPTECH</p>
-            <p className="text-sm text-gray-400 mt-1">Your idea, engineered.</p>
+            <Image
+              src="/logo-light.png"
+              alt="AmpTech"
+              width={985}
+              height={174}
+              className="h-7 w-auto brightness-0 invert"
+            />
+            <p className="text-sm text-gray-400 mt-2">Your idea, engineered.</p>
           </div>
 
           {/* Links */}
