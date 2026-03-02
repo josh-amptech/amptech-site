@@ -30,10 +30,14 @@ export default function Plan() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="text-sm font-medium uppercase tracking-wide text-brand-red mb-8">
+        <p className="text-sm font-semibold uppercase tracking-widest text-brand-red mb-4">
           How It Works
         </p>
-        <div className="grid md:grid-cols-3 gap-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-brand-black mb-16 max-w-lg leading-tight">
+          Three steps to a working application.
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-10 md:gap-8">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
@@ -41,17 +45,22 @@ export default function Plan() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.12, ease: "easeOut" }}
-              className="border-t-2 border-brand-red pt-6"
             >
-              <p className="text-4xl font-bold text-brand-red-light mb-4">
+              {/* Ghost step number */}
+              <div
+                className="text-[7rem] font-black leading-none text-brand-red-light select-none pointer-events-none mb-1"
+                aria-hidden="true"
+              >
                 {step.number}
-              </p>
-              <h3 className="text-xl font-semibold text-brand-black mb-3">
-                {step.title}
-              </h3>
-              <p className="text-base text-brand-gray leading-relaxed">
-                {step.body}
-              </p>
+              </div>
+              <div className="border-t-2 border-brand-red pt-6">
+                <h3 className="text-xl font-bold text-brand-black mb-3 leading-tight">
+                  {step.title}
+                </h3>
+                <p className="text-base text-brand-gray leading-relaxed">
+                  {step.body}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
