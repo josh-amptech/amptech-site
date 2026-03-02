@@ -47,9 +47,12 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-gray-800 mt-8 pt-8 flex justify-between items-center">
           <p className="text-sm text-gray-500">
             © {new Date().getFullYear()} AmpTech. All rights reserved.
+          </p>
+          <p className="text-xs text-gray-700">
+            v{process.env.NEXT_PUBLIC_APP_VERSION}
           </p>
         </div>
       </div>
