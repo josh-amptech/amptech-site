@@ -7,16 +7,90 @@
   --color-brand-black: #000000;
   --color-brand-white: #FFFFFF;
   --color-brand-gray-bg: #F5F5F5;
+  --color-brand-ink: #111111;
+  --color-brand-cream: #F1ECE4;
+  --color-brand-steel: #90877C;
+  --color-brand-night: #0B0B0C;
+  --color-brand-night-soft: #18181B;
 
   --font-sans: var(--font-montserrat), Arial, sans-serif;
+  --font-display: var(--font-bebas), Impact, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #ffffff;
+  background:
+    radial-gradient(circle at top, rgba(212, 30, 16, 0.09), transparent 28%),
+    linear-gradient(180deg, #f7f2ea 0%, #f7f3ee 42%, #ffffff 100%);
   color: #4D4D4D;
 }
 
-.hero-dot-grid {
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
-  background-size: 28px 28px;
+a {
+  text-underline-offset: 0.2em;
+}
+
+.display-type {
+  font-family: var(--font-display), Impact, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.site-shell {
+  position: relative;
+}
+
+.site-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(212, 30, 16, 0.08), transparent 22%),
+    radial-gradient(circle at 80% 18%, rgba(212, 30, 16, 0.09), transparent 18%);
+  opacity: 0.9;
+}
+
+.hero-noise {
+  position: relative;
+  overflow: clip;
+  background:
+    linear-gradient(135deg, rgba(11, 11, 12, 0.97) 0%, rgba(24, 24, 27, 0.96) 54%, rgba(212, 30, 16, 0.92) 100%);
+}
+
+.hero-noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 84px 84px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95), transparent 92%);
+  opacity: 0.18;
+}
+
+.hero-noise::after {
+  content: "";
+  position: absolute;
+  inset: auto -12% -20% auto;
+  width: min(50vw, 38rem);
+  height: min(50vw, 38rem);
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(241, 236, 228, 0.32), transparent 68%);
+  filter: blur(24px);
+}
+
+.section-rule {
+  border-top: 1px solid rgba(17, 17, 17, 0.12);
+}
+
+@media (max-width: 768px) {
+  body {
+    background:
+      radial-gradient(circle at top, rgba(212, 30, 16, 0.08), transparent 22%),
+      linear-gradient(180deg, #f7f2ea 0%, #ffffff 72%);
+  }
 }

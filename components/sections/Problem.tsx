@@ -4,63 +4,49 @@ import { motion } from "framer-motion";
 
 export default function Problem() {
   return (
-    <section className="bg-brand-black py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <section className="px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand-red mb-10">
+          <p className="mb-8 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
             The Problem
           </p>
 
-          <div className="max-w-3xl space-y-6 mb-12">
-            <p className="text-xl text-gray-300 leading-relaxed">
-              You&apos;ve seen what AI can build. You&apos;ve watched the
-              demos. You may have even tried Replit, Bolt, or Lovable yourself
-              — or spent real time with Claude or Cursor — and gotten further
-              than you expected.
-            </p>
-            <p className="text-3xl font-bold text-white leading-snug">
-              Then you hit the wall.
-            </p>
-            <p className="text-xl text-gray-300 leading-relaxed">
-              The code broke in ways you couldn&apos;t debug. The AI started
-              going in circles. The freelancer delivered something
-              half-finished. And the idea that felt so close is still just an
-              idea.
-            </p>
+          <div className="section-rule grid gap-12 pt-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
+            <div className="max-w-3xl">
+              <p className="display-type text-[3.7rem] leading-[0.92] text-brand-ink sm:text-[5rem] md:text-[6.4rem]">
+                YOU GOT
+                <br />
+                FURTHER
+                <br />
+                THAN YOU
+                <br />
+                EXPECTED.
+              </p>
+            </div>
+
+            <div className="space-y-6 pt-2">
+              <p className="text-lg leading-relaxed text-brand-gray">
+                You&apos;ve seen what AI can build. You may have even tried
+                Replit, Bolt, Lovable, Claude, or Cursor yourself and gotten
+                further than you expected.
+              </p>
+              <p className="text-lg leading-relaxed text-brand-gray">
+                Then you hit the wall. The code broke in ways you could not
+                debug. The AI went in circles. The freelancer got you part of
+                the way there, but not all the way to something you could
+                launch with confidence.
+              </p>
+              <p className="text-sm uppercase tracking-[0.24em] text-brand-steel">
+                The gap between a promising demo and production-ready software
+                is real.
+              </p>
+            </div>
           </div>
-
-          {/* Mech suit pull-quote */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="border-l-4 border-brand-red pl-8 py-2 mb-12"
-          >
-            <p className="text-2xl md:text-3xl font-semibold text-white leading-snug italic">
-              &ldquo;AI isn&apos;t a robo-taxi. It won&apos;t just pick you up
-              and take you where you want to go. It&apos;s more like a mech
-              suit — an incredible force multiplier for the person who knows
-              how to operate it.&rdquo;
-            </p>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-            className="text-xl text-gray-300 leading-relaxed max-w-3xl"
-          >
-            That gap between a working demo and production-ready software?
-            It&apos;s real. And it takes 20+ years of engineering judgment to
-            cross it reliably.
-          </motion.p>
         </motion.div>
       </div>
     </section>

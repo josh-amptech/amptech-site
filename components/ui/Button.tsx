@@ -4,14 +4,16 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 type Variant = "primary" | "secondary" | "ghost";
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-brand-red text-white hover:opacity-90",
+  primary:
+    "bg-brand-red text-white hover:bg-[#b8190d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-red",
   secondary:
-    "border-2 border-brand-black text-brand-black hover:bg-brand-black hover:text-white",
-  ghost: "text-brand-red hover:underline underline-offset-4",
+    "border border-current text-current hover:bg-current hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current",
+  ghost:
+    "text-brand-red hover:underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-red",
 };
 
 const base =
-  "inline-flex items-center justify-center text-base font-semibold rounded transition-all duration-200 px-6 py-3 cursor-pointer";
+  "inline-flex cursor-pointer items-center justify-center rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] transition-all duration-200";
 
 type LinkButtonProps = {
   variant?: Variant;

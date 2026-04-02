@@ -63,11 +63,18 @@ export default function ContactPage() {
             </svg>
           </div>
           <h2 className="text-3xl font-bold text-brand-black mb-4">
-            We&apos;ll be in touch.
+            Request received.
           </h2>
           <p className="text-base text-brand-gray leading-relaxed">
-            Thanks for reaching out. We review every submission personally and
-            will respond within one business day.
+            Thanks for reaching out. Your request was submitted successfully.
+            If you prefer, you can also email{" "}
+            <a
+              href="mailto:hello@amptech.dev"
+              className="text-brand-red underline underline-offset-4"
+            >
+              hello@amptech.dev
+            </a>
+            .
           </p>
         </div>
       </SectionWrapper>
@@ -225,7 +232,8 @@ export default function ContactPage() {
 
           {error && (
             <p className="text-sm text-brand-red">
-              Something went wrong. Please try again or email us directly at{" "}
+              Submissions are not configured on this deployment yet. Please
+              email us directly at{" "}
               <a
                 href="mailto:hello@amptech.dev"
                 className="underline underline-offset-4"

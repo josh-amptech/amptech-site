@@ -12,24 +12,26 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // TODO: Wire up email delivery via AWS SES or Resend
-    // Example with Resend:
-    //
-    // import { Resend } from 'resend'
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    // await resend.emails.send({
-    //   from: 'AmpTech <noreply@amptech.dev>',
-    //   to: 'hello@amptech.dev',
-    //   subject: `New discovery call request from ${name}`,
-    //   text: `Name: ${name}\nEmail: ${email}\nIdea: ${idea}\nTried before: ${triedBefore}\nTimeline: ${timeline}`,
-    // })
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json(
+        { error: "Contact delivery is not configured" },
+        { status: 503 }
+      );
+    }
 
-    console.log("New discovery call request:", {
-      name,
-      email,
-      idea,
-      triedBefore,
-      timeline,
+    const { Resend } = await import("resend");
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    await resend.emails.send({
+      from: "AmpTech <noreply@amptech.dev>",
+      to: "hello@amptech.dev",
+      subject: `New discovery call request from ${name}`,
+      text: `Name: ${name}
+Email: ${email}
+Idea: ${idea}
+Tried before: ${triedBefore}
+Timeline: ${timeline}`,
+      replyTo: email,
     });
 
     return NextResponse.json({ success: true });

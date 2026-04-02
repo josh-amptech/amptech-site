@@ -4,37 +4,55 @@ import { motion } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 
+const proofPoints = [
+  "20+ years of professional software development experience",
+  "References from people who have worked with us directly",
+  "A straightforward scoping process before full development begins",
+];
+
 export default function SocialProof() {
   return (
-    <SectionWrapper className="bg-brand-gray-bg">
+    <SectionWrapper>
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10">
+        <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
           <div className="max-w-xl">
-            <p className="text-sm font-semibold uppercase tracking-widest text-brand-red mb-4">
-              Founding Clients
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
+              Confidence
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-black mb-4 leading-tight">
-              Now accepting the first cohort.
+            <h2 className="display-type mb-4 text-[3rem] leading-[0.92] text-brand-ink sm:text-[3.9rem] md:text-[4.6rem]">
+              Built on experience, not hype.
             </h2>
-            <p className="text-lg text-brand-gray leading-relaxed">
-              AmpTech is in its founding phase. A small number of projects are
-              open now. If you have an idea that&apos;s been waiting for the
-              right team — this is it.
+            <p className="text-lg leading-relaxed text-brand-gray">
+              When you hire AmpTech, you are not hiring a prompt and hoping for
+              the best. You are hiring engineering judgment, clear
+              communication, and a process designed to get your idea to a real
+              launch.
             </p>
+            <div className="mt-10 space-y-5 border-t border-black/10 pt-6">
+              {proofPoints.map((point) => (
+                <div key={point} className="flex items-start gap-3">
+                  <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-brand-red" />
+                  <p className="text-base leading-relaxed text-brand-gray">
+                    {point}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="flex-shrink-0">
             <Button
-              href="/contact"
-              variant="primary"
+              href="/about"
+              variant="secondary"
+              className="border-brand-ink text-brand-ink hover:bg-brand-ink"
               data-umami-event="cta-click"
-              data-umami-event-label="social-proof"
+              data-umami-event-label="experience-proof"
             >
-              Book a Discovery Call
+              Meet AmpTech
             </Button>
           </div>
         </div>
