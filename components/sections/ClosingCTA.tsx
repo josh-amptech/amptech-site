@@ -5,32 +5,40 @@ import Button from "@/components/ui/Button";
 
 export default function ClosingCTA() {
   return (
-    <section className="bg-brand-black py-28 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <section className="bg-brand-night px-4 py-28 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-2xl"
+          className="max-w-4xl"
         >
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand-red mb-6">
-            Ready to Build
+          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red-light/80">
+            Ready To Build
           </p>
-          <h2 className="text-4xl md:text-6xl font-black text-white leading-none mb-6">
-            Your idea has been waiting long enough.
+          <h2 className="display-type mb-6 text-[3.7rem] leading-[0.92] text-white sm:text-[5rem] md:text-[6.4rem]">
+            YOUR IDEA
+            <br />
+            HAS BEEN
+            <br />
+            WAITING
+            <br />
+            LONG ENOUGH.
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed mb-12">
-            Let&apos;s build it.
+          <p className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300">
+            You do not need to figure this out alone. If you are ready to turn
+            the idea into a real product, let&apos;s talk.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <Button
               href="/contact"
               variant="primary"
+              className="min-w-[15rem]"
               data-umami-event="cta-click"
               data-umami-event-label="closing-cta"
             >
-              Book a Free Discovery Call
+              Book A Discovery Call
             </Button>
             <p className="text-sm text-gray-400">
               Or email{" "}

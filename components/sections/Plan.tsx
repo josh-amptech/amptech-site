@@ -7,37 +7,41 @@ const steps = [
   {
     number: "01",
     title: "Tell us what you want to build",
-    body: "Book a free 30-minute discovery call. Describe your idea — no technical knowledge needed.",
+    body: "Book a free 30-minute discovery call. Describe your idea without translating it into developer language first.",
   },
   {
     number: "02",
     title: "We scope, design, and price it",
-    body: "You get a clear proposal: what we'll build, how long it takes, and what it costs. No surprises.",
+    body: "You get a build plan with real tradeoffs, timeline expectations, and cost before development starts.",
   },
   {
     number: "03",
     title: "We build it and hand it over",
-    body: "You receive a complete, tested, deployed application — and everything you need to own and run it.",
+    body: "You get tested software, deployment support, and ownership of the result instead of dependency on the process.",
   },
 ];
 
 export default function Plan() {
   return (
-    <SectionWrapper>
+    <SectionWrapper className="bg-brand-night text-white">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="text-sm font-semibold uppercase tracking-widest text-brand-red mb-4">
-          How It Works
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red-light/80">
+          The Plan
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-brand-black mb-16 max-w-lg leading-tight">
-          Three steps to a working application.
+        <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-brand-cream sm:text-[4.4rem] md:text-[5.4rem]">
+          A CLEAR PATH
+          <br />
+          FROM IDEA
+          <br />
+          TO LAUNCH.
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-10 md:gap-8">
+        <div className="grid gap-10 border-t border-white/14 pt-10 md:grid-cols-3 md:gap-8">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
@@ -46,18 +50,17 @@ export default function Plan() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.12, ease: "easeOut" }}
             >
-              {/* Ghost step number */}
               <div
-                className="text-[7rem] font-black leading-none text-brand-red-light select-none pointer-events-none mb-1"
+                className="display-type mb-3 text-[5.5rem] leading-none text-white/12 select-none pointer-events-none"
                 aria-hidden="true"
               >
                 {step.number}
               </div>
-              <div className="border-t-2 border-brand-red pt-6">
-                <h3 className="text-xl font-bold text-brand-black mb-3 leading-tight">
+              <div className="border-t border-white/14 pt-6">
+                <h3 className="mb-3 text-xl font-bold leading-tight text-white">
                   {step.title}
                 </h3>
-                <p className="text-base text-brand-gray leading-relaxed">
+                <p className="text-base leading-relaxed text-white/72">
                   {step.body}
                 </p>
               </div>

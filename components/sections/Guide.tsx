@@ -5,21 +5,20 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const features = [
   {
-    title: "20+ Years Knowing When AI Gets It Wrong",
-    description: "The judgment that turns demos into real software.",
+    title: "Senior engineering judgment",
+    description: "We know where AI helps, where it drifts, and what has to be right before real users ever see it.",
   },
   {
-    title: "AI Speed. Human Judgment.",
-    description: "We move fast because we know what we're building.",
+    title: "AI speed, used well",
+    description: "We use the same tools creating all the momentum, but with the experience to turn that speed into a real product.",
   },
   {
-    title: "Transparent Scoping",
-    description:
-      "You'll know what we're building, what it costs, and when — before we start.",
+    title: "Transparent scoping",
+    description: "You know what we are building, how we will approach it, and what the next milestone looks like before work starts.",
   },
   {
-    title: "The Code Is Yours. Always.",
-    description: "No platform dependency. No lock-in.",
+    title: "A clean handoff",
+    description: "You own the code, the infrastructure, and the documentation. No lock-in. No mystery.",
   },
 ];
 
@@ -32,37 +31,49 @@ export default function Guide() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="text-sm font-semibold uppercase tracking-widest text-brand-red mb-4">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
           Why AmpTech
         </p>
-        <div className="max-w-3xl mb-14">
-          <p className="text-3xl md:text-4xl font-bold text-brand-black leading-snug mb-6">
-            We&apos;ve helped entrepreneurs go from &ldquo;I have this
-            idea&rdquo; to &ldquo;here&apos;s my product.&rdquo;
-          </p>
-          <p className="text-lg text-brand-gray leading-relaxed">
-            AmpTech is led by a software engineer with over 20 years of
-            professional development experience. We use the best AI-powered
-            development tools available — not to replace engineering judgment,
-            but to dramatically accelerate what great engineering judgment can
-            produce.
-          </p>
+
+        <div className="grid gap-12 border-t border-black/10 pt-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+          <div>
+            <p className="display-type max-w-3xl text-[3.3rem] leading-[0.92] text-brand-ink sm:text-[4.4rem] md:text-[5.5rem]">
+              YOU DO NOT
+              <br />
+              NEED MORE
+              <br />
+              CODE.
+              <br />
+              YOU NEED
+              <br />
+              A GUIDE.
+            </p>
+          </div>
+          <div>
+            <p className="text-lg leading-relaxed text-brand-gray">
+              AmpTech exists to close the gap between what AI tools promise and
+              what founders can actually ship on their own. We bring 20+ years
+              of professional software development experience to the part that
+              still requires judgment: architecture, tradeoffs, debugging, and
+              getting the product over the line.
+            </p>
+          </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="mt-16 grid gap-4 md:grid-cols-4">
           {features.map((feature, i) => (
             <motion.div
-              key={i}
+              key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
-              className="bg-white border-t-2 border-brand-red p-8"
+              transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
+              className="section-rule pt-5"
             >
-              <h3 className="text-lg font-bold text-brand-black mb-3 leading-snug">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-red">
                 {feature.title}
-              </h3>
-              <p className="text-base text-brand-gray leading-relaxed">
+              </p>
+              <p className="text-base leading-relaxed text-brand-gray">
                 {feature.description}
               </p>
             </motion.div>

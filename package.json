@@ -14,7 +14,8 @@
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-hook-form": "^7"
+    "react-hook-form": "^7",
+    "resend": "^6.2.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",

@@ -9,90 +9,87 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-night/80 text-white backdrop-blur-xl">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
           <Link href="/" aria-label="AmpTech home">
             <Image
               src="/logo-light.png"
               alt="AmpTech"
               width={985}
               height={174}
-              className="h-8 w-auto"
+              className="h-8 w-auto brightness-0 invert"
               priority
             />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden items-center gap-8 md:flex">
             <Link
               href="/services"
-              className="text-sm font-medium text-brand-gray hover:text-brand-black transition-colors"
+              className="text-sm font-medium text-white/72 transition-colors hover:text-white"
             >
               Services
             </Link>
             <Link
               href="/work"
-              className="text-sm font-medium text-brand-gray hover:text-brand-black transition-colors"
+              className="text-sm font-medium text-white/72 transition-colors hover:text-white"
             >
-              Work
+              Experience
             </Link>
             <Link
               href="/about"
-              className="text-sm font-medium text-brand-gray hover:text-brand-black transition-colors"
+              className="text-sm font-medium text-white/72 transition-colors hover:text-white"
             >
               About
             </Link>
             <Button
               href="/contact"
               variant="primary"
+              className="px-5 py-2.5"
               data-umami-event="nav-cta-click"
             >
-              Book a Discovery Call
+              Book A Call
             </Button>
           </nav>
 
-          {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2 text-brand-black"
+            className="p-2 text-white md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
             <div
-              className={`w-5 h-0.5 bg-brand-black transition-transform duration-200 ${menuOpen ? "translate-y-1.5 rotate-45" : "mb-1.5"}`}
+              className={`h-0.5 w-5 bg-white transition-transform duration-200 ${menuOpen ? "translate-y-1.5 rotate-45" : "mb-1.5"}`}
             />
             <div
-              className={`w-5 h-0.5 bg-brand-black transition-opacity duration-200 ${menuOpen ? "opacity-0" : "mb-1.5"}`}
+              className={`h-0.5 w-5 bg-white transition-opacity duration-200 ${menuOpen ? "opacity-0" : "mb-1.5"}`}
             />
             <div
-              className={`w-5 h-0.5 bg-brand-black transition-transform duration-200 ${menuOpen ? "-translate-y-1.5 -rotate-45" : ""}`}
+              className={`h-0.5 w-5 bg-white transition-transform duration-200 ${menuOpen ? "-translate-y-1.5 -rotate-45" : ""}`}
             />
           </button>
         </div>
 
-        {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden py-6 border-t border-gray-100">
+          <div className="border-t border-white/10 py-6 md:hidden">
             <nav className="flex flex-col gap-5">
               <Link
                 href="/services"
-                className="text-sm font-medium text-brand-gray"
+                className="text-sm font-medium text-white/72"
                 onClick={() => setMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="/work"
-                className="text-sm font-medium text-brand-gray"
+                className="text-sm font-medium text-white/72"
                 onClick={() => setMenuOpen(false)}
               >
-                Work
+                Experience
               </Link>
               <Link
                 href="/about"
-                className="text-sm font-medium text-brand-gray"
+                className="text-sm font-medium text-white/72"
                 onClick={() => setMenuOpen(false)}
               >
                 About
@@ -101,9 +98,10 @@ export default function Nav() {
                 <Button
                   href="/contact"
                   variant="primary"
+                  className="w-full"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Book a Discovery Call
+                  Book A Call
                 </Button>
               </div>
             </nav>
