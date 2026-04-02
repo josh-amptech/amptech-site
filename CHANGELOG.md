@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/josh-amptech/amptech-site/compare/v1.0.0...v1.1.0) (2026-04-02)
+
+
+### Features
+
+* design audit ([#17](https://github.com/josh-amptech/amptech-site/issues/17)) ([09c74af](https://github.com/josh-amptech/amptech-site/commit/09c74af62f5e0048359840ed915cb49f323aac5a))
+
 # 1.0.0 (2026-03-02)
 
 
