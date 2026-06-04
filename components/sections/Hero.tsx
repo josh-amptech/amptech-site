@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 
 const capabilityMarks = [
-  "Built in weeks, not months",
-  "20+ years of engineering experience",
-  "You own the code. Always.",
+  "Stalled AI builds",
+  "Founder-led products",
+  "Launch-ready handoff",
 ];
 
 export default function Hero() {
@@ -39,26 +39,26 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.12, ease: "easeOut" }}
-            className="display-type max-w-4xl text-[4.1rem] leading-[0.88] text-brand-cream sm:text-[6.4rem] md:text-[8.8rem] lg:text-[10rem]"
+            className="display-type max-w-4xl text-[4rem] leading-[0.9] text-brand-cream sm:text-[6rem] md:text-[7.8rem] lg:text-[8.8rem]"
           >
-            YOUR APP
+            YOU HAVE
             <br />
-            IDEA,
+            A DEMO.
             <br />
-            <span className="text-brand-red-light">FINALLY</span>
+            NOW BUILD
             <br />
-            BUILT.
+            <span className="text-brand-red-light">THE PRODUCT.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.22, ease: "easeOut" }}
-            className="mt-6 max-w-xl text-base leading-relaxed text-brand-cream/78 sm:text-lg"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-brand-cream/82 sm:text-lg"
           >
-            AmpTech helps entrepreneurs and business owners turn app ideas into
-            real, working software, using AI to move fast and 20+ years of
-            engineering experience to build it right.
+            AmpTech helps founders and business owners turn promising AI builds,
+            rough prototypes, and half-finished app ideas into software people
+            can actually use.
           </motion.p>
 
           <motion.div
@@ -77,11 +77,11 @@ export default function Hero() {
               Book A Discovery Call
             </Button>
             <Button
-              href="/services"
+              href="/work"
               variant="secondary"
               className="border-white/50 text-white hover:bg-white hover:text-brand-night"
             >
-              See How It Works
+              See The Proof
             </Button>
           </motion.div>
 
@@ -107,7 +107,7 @@ export default function Hero() {
           >
             <div className="w-full border-t border-white/18 pt-6">
               <p className="text-xs uppercase tracking-[0.24em] text-brand-cream/52">
-                You do not need to become a developer to get this built.
+                You do not need another prompt. You need a build that holds up.
               </p>
             </div>
           </motion.div>
@@ -122,18 +122,18 @@ export default function Hero() {
           <div className="relative w-full max-w-md">
             <div className="absolute inset-x-0 top-10 h-px bg-white/18" />
             <div className="ml-auto w-[88%]">
-              <div className="display-type text-right text-[9rem] leading-[0.82] text-brand-cream/14">
-                20+
+              <div className="display-type text-right text-[8.4rem] leading-[0.82] text-brand-cream/14">
+                DEMO
                 <br />
-                YEARS
+                PRODUCT
               </div>
               <div className="-mt-4 border-l border-white/18 pl-6">
                 <p className="text-sm uppercase tracking-[0.24em] text-brand-cream/48">
-                  Built with AI speed.
+                  The hard part starts after the demo works.
                 </p>
                 <p className="mt-3 max-w-xs text-lg leading-relaxed text-brand-cream/78">
-                  Guided by the engineering judgment that keeps the foundation
-                  solid when real users show up.
+                  We turn the rough version into the version you can show,
+                  launch, own, and keep improving.
                 </p>
               </div>
             </div>

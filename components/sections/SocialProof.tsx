@@ -5,9 +5,9 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 
 const proofPoints = [
-  "20+ years of professional software development experience",
+  "20+ years building software beyond the prototype stage",
   "References from people who have worked with us directly",
-  "A straightforward scoping process before full development begins",
+  "A scoping process that tells you what is real before you commit",
 ];
 
 export default function SocialProof() {
@@ -25,13 +25,12 @@ export default function SocialProof() {
               Confidence
             </p>
             <h2 className="display-type mb-4 text-[3rem] leading-[0.92] text-brand-ink sm:text-[3.9rem] md:text-[4.6rem]">
-              Built on experience, not hype.
+              Proof before promises.
             </h2>
             <p className="text-lg leading-relaxed text-brand-gray">
-              When you hire AmpTech, you are not hiring a prompt and hoping for
-              the best. You are hiring engineering judgment, clear
-              communication, and a process designed to get your idea to a real
-              launch.
+              You should not have to trust a big claim on a small website. You
+              should be able to see how we think, how we scope, and what kind
+              of work we can carry across the finish line.
             </p>
             <div className="mt-10 space-y-5 border-t border-black/10 pt-6">
               {proofPoints.map((point) => (
@@ -46,13 +45,13 @@ export default function SocialProof() {
           </div>
           <div className="flex-shrink-0">
             <Button
-              href="/about"
+              href="/work"
               variant="secondary"
               className="border-brand-ink text-brand-ink hover:bg-brand-ink"
               data-umami-event="cta-click"
               data-umami-event-label="experience-proof"
             >
-              Meet AmpTech
+              See The Proof
             </Button>
           </div>
         </div>

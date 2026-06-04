@@ -5,20 +5,20 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const features = [
   {
-    title: "Senior engineering judgment",
-    description: "We know where AI helps, where it drifts, and what has to be right before real users ever see it.",
+    title: "Find the real blockers",
+    description: "We separate surface bugs from architecture problems so the project stops moving in circles.",
   },
   {
-    title: "AI speed, used well",
-    description: "We use the same tools creating all the momentum, but with the experience to turn that speed into a real product.",
+    title: "Build what has to hold",
+    description: "Accounts, data, payments, permissions, deployment, and the unglamorous parts that make software usable.",
   },
   {
-    title: "Transparent scoping",
-    description: "You know what we are building, how we will approach it, and what the next milestone looks like before work starts.",
+    title: "Keep the path visible",
+    description: "You know what is being fixed, what is being rebuilt, and what needs to happen before launch.",
   },
   {
-    title: "A clean handoff",
-    description: "You own the code, the infrastructure, and the documentation. No lock-in. No mystery.",
+    title: "Hand it over cleanly",
+    description: "The code, infrastructure, and documentation belong to you. No lock-in. No mystery build.",
   },
 ];
 
@@ -38,24 +38,22 @@ export default function Guide() {
         <div className="grid gap-12 border-t border-black/10 pt-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
           <div>
             <p className="display-type max-w-3xl text-[3.3rem] leading-[0.92] text-brand-ink sm:text-[4.4rem] md:text-[5.5rem]">
-              YOU DO NOT
-              <br />
-              NEED MORE
-              <br />
-              CODE.
-              <br />
               YOU NEED
               <br />
-              A GUIDE.
+              SOMEONE WHO
+              <br />
+              CAN GET IT
+              <br />
+              ACROSS
+              <br />
+              THE LINE.
             </p>
           </div>
           <div>
             <p className="text-lg leading-relaxed text-brand-gray">
-              AmpTech exists to close the gap between what AI tools promise and
-              what founders can actually ship on their own. We bring 20+ years
-              of professional software development experience to the part that
-              still requires judgment: architecture, tradeoffs, debugging, and
-              getting the product over the line.
+              AmpTech brings senior engineering judgment to the messy middle of
+              a build: the point where a prototype exists, but the product is
+              not stable enough to sell, demo, or depend on.
             </p>
           </div>
         </div>

@@ -15,7 +15,9 @@ export default function Footer() {
               height={174}
               className="h-7 w-auto brightness-0 invert"
             />
-            <p className="text-sm text-gray-400 mt-2">Your idea, engineered.</p>
+            <p className="text-sm text-gray-400 mt-2">
+              From stuck prototype to real product.
+            </p>
           </div>
 
           {/* Links */}

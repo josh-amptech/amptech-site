@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 export const metadata = {
   title: "About — AmpTech",
   description:
-    "20+ years of engineering experience, now applied to helping entrepreneurs ship their ideas.",
+    "The senior engineering help behind AmpTech's prototype-to-product work.",
 };
 
 export default function AboutPage() {
@@ -16,26 +16,27 @@ export default function AboutPage() {
           About
         </p>
         <h1 className="display-type text-[3.5rem] leading-[0.92] text-brand-ink mb-6 sm:text-[4.7rem] md:text-[5.8rem]">
-          THE ENGINEER
+          THE HELP
           <br />
-          BEHIND YOUR
+          BEHIND THE
           <br />
-          IDEA.
+          BUILD.
         </h1>
         <p className="text-lg text-brand-gray leading-relaxed mb-6">
-          AmpTech was founded to solve a specific problem: too many good ideas
-          stall out in the gap between what AI tools promise and what
-          non-technical founders can actually ship on their own.
+          AmpTech was founded for the moment when a promising build stops
+          moving. The demo exists. The idea is still strong. But the project
+          needs experienced engineering to become something real users can rely
+          on.
         </p>
         <p className="text-base text-brand-gray leading-relaxed mb-6">
-          We work with founders who have momentum, clarity, and a real product
-          vision, but who need an experienced guide to turn that into something
-          they can launch and grow.
+          We work with founders and business owners who have momentum, clarity,
+          and a real product vision, but need help getting from rough version to
+          launch-ready software.
         </p>
         <p className="text-base text-brand-gray leading-relaxed mb-10">
-          AmpTech uses the best AI-powered development tools available, not to
-          replace engineering judgment, but to dramatically accelerate what good
-          engineering judgment can produce.
+          We use modern AI-assisted development tools where they help, but the
+          work is led by engineering judgment: architecture, tradeoffs,
+          debugging, deployment, and clean ownership.
         </p>
         <div className="border border-gray-200 p-8 mb-10">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand-red mb-4">
@@ -47,8 +48,8 @@ export default function AboutPage() {
             have worked with us directly.
           </p>
           <p className="text-base text-brand-gray leading-relaxed">
-            The goal is simple: help you get from idea to real software without
-            having to become a developer yourself.
+            The goal is simple: help you get from stuck build to real software
+            without having to become a developer yourself.
           </p>
         </div>
         <div className="flex flex-wrap gap-3 mb-10">

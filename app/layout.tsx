@@ -17,9 +17,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "AmpTech — Your App Idea, Finally Built",
+  title: "AmpTech — From Stuck Demo To Real Product",
   description:
-    "AmpTech builds professional web and mobile applications for entrepreneurs and business owners — AI-powered development speed, senior engineering quality.",
+    "AmpTech helps founders and business owners turn rough prototypes, stalled AI builds, and app ideas into software people can actually use.",
 };
 
 export default function RootLayout({
