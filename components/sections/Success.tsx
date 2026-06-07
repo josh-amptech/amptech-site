@@ -47,7 +47,7 @@ export default function Success() {
   return (
     <SectionWrapper>
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -69,7 +69,7 @@ export default function Success() {
           {outcomes.map((item, i) => (
             <motion.div
               key={item.headline}
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}

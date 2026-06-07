@@ -25,7 +25,7 @@ export default function Plan() {
   return (
     <SectionWrapper className="bg-brand-night text-white">
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -45,7 +45,7 @@ export default function Plan() {
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.12, ease: "easeOut" }}

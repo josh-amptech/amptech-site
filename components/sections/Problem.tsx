@@ -7,7 +7,7 @@ export default function Problem() {
     <section className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}

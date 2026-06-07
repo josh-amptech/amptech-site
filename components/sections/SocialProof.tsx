@@ -14,7 +14,7 @@ export default function SocialProof() {
   return (
     <SectionWrapper>
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}

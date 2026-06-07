@@ -14,13 +14,13 @@ export default function Hero() {
     <section className="hero-noise min-h-[calc(100svh-4rem)] text-white">
       <div className="mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl px-4 sm:px-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(19rem,0.8fr)] lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: "easeOut" }}
           className="relative z-10 flex flex-col justify-center py-14 sm:py-18 lg:py-24"
         >
           <motion.p
-            initial={{ opacity: 0, y: 16 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.05, ease: "easeOut" }}
             className="mb-6 text-sm font-semibold uppercase tracking-[0.28em] text-brand-cream/70"
@@ -29,17 +29,17 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ scaleX: 0 }}
+            initial={false}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.55, ease: "easeOut", delay: 0.1 }}
             className="mb-8 h-px w-24 origin-left bg-brand-cream/40"
           />
 
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.12, ease: "easeOut" }}
-            className="display-type max-w-4xl text-[4rem] leading-[0.9] text-brand-cream sm:text-[6rem] md:text-[7.8rem] lg:text-[8.8rem]"
+            className="display-type max-w-4xl text-[3.35rem] leading-[0.9] text-brand-cream sm:text-[6rem] md:text-[7.8rem] lg:text-[8.8rem]"
           >
             YOU HAVE
             <br />
@@ -51,7 +51,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.22, ease: "easeOut" }}
             className="mt-6 max-w-2xl text-base leading-relaxed text-brand-cream/82 sm:text-lg"
@@ -62,7 +62,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             className="mt-10 flex flex-col gap-4 sm:flex-row"
@@ -86,7 +86,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 8 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.38, ease: "easeOut" }}
             className="mt-8 grid gap-3 text-xs uppercase tracking-[0.22em] text-brand-cream/60 sm:mt-10 sm:flex sm:flex-wrap sm:gap-5 sm:text-sm"
@@ -100,7 +100,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 24 }}
+            initial={false}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.75, delay: 0.2, ease: "easeOut" }}
             className="mt-16 flex items-end lg:hidden"
@@ -114,7 +114,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
+          initial={false}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.85, delay: 0.22, ease: "easeOut" }}
           className="relative hidden lg:flex lg:items-end lg:justify-end lg:py-24"
