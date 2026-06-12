@@ -2,9 +2,9 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 
 export const metadata = {
-  title: "Proof — AmpTech",
+  title: "How We Work — AmpTech",
   description:
-    "How AmpTech shows its work before formal case studies exist.",
+    "How AmpTech scopes builds, makes technical decisions, and hands off working software.",
 };
 
 const proofBlocks = [
@@ -23,7 +23,7 @@ export default function WorkPage() {
     <SectionWrapper>
       <div className="max-w-5xl">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
-          Proof Of Work
+          How We Work
         </p>
         <h1 className="display-type max-w-4xl text-[3.5rem] leading-[0.92] text-brand-ink sm:text-[4.7rem] md:text-[5.8rem]">
           HOW TO

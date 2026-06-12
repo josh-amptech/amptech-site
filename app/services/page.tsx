@@ -83,7 +83,7 @@ export default function ServicesPage() {
             Book A Discovery Call
           </Button>
           <Button href="/work" variant="secondary">
-            See The Proof
+            See How We Work
           </Button>
         </div>
       </div>
