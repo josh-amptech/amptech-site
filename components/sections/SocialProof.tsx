@@ -25,7 +25,7 @@ export default function SocialProof() {
               Confidence
             </p>
             <h2 className="display-type mb-4 text-[3rem] leading-[0.92] text-brand-ink sm:text-[3.9rem] md:text-[4.6rem]">
-              Proof before promises.
+              Look before you book.
             </h2>
             <p className="text-lg leading-relaxed text-brand-gray">
               You should not have to trust a big claim on a small website. You
@@ -51,7 +51,7 @@ export default function SocialProof() {
               data-umami-event="cta-click"
               data-umami-event-label="experience-proof"
             >
-              See The Proof
+              See How We Work
             </Button>
           </div>
         </div>

@@ -81,7 +81,7 @@ export default function Hero() {
               variant="secondary"
               className="border-white/50 text-white hover:bg-white hover:text-brand-night"
             >
-              See The Proof
+              See How We Work
             </Button>
           </motion.div>
 
