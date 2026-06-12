@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/josh-amptech/amptech-site/compare/v1.1.0...v1.2.0) (2026-06-12)
+
+
+### Features
+
+* sharpen homepage positioning ([#18](https://github.com/josh-amptech/amptech-site/issues/18)) ([27ed538](https://github.com/josh-amptech/amptech-site/commit/27ed538a59479d48d4b671e2afb66a1684a60117))
+
 # [1.1.0](https://github.com/josh-amptech/amptech-site/compare/v1.0.0...v1.1.0) (2026-04-02)
 
 
