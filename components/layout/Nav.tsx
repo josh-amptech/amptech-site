@@ -34,7 +34,7 @@ export default function Nav() {
               href="/work"
               className="text-sm font-medium text-white/72 transition-colors hover:text-white"
             >
-              Experience
+              Proof
             </Link>
             <Link
               href="/about"
@@ -85,7 +85,7 @@ export default function Nav() {
                 className="text-sm font-medium text-white/72"
                 onClick={() => setMenuOpen(false)}
               >
-                Experience
+                Proof
               </Link>
               <Link
                 href="/about"

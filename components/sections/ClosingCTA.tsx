@@ -8,7 +8,7 @@ export default function ClosingCTA() {
     <section className="bg-brand-night px-4 py-28 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -18,17 +18,17 @@ export default function ClosingCTA() {
             Ready To Build
           </p>
           <h2 className="display-type mb-6 text-[3.7rem] leading-[0.92] text-white sm:text-[5rem] md:text-[6.4rem]">
-            YOUR IDEA
+            READY TO
             <br />
-            HAS BEEN
+            GET THIS
             <br />
-            WAITING
+            ACROSS
             <br />
-            LONG ENOUGH.
+            THE LINE?
           </h2>
           <p className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300">
-            You do not need to figure this out alone. If you are ready to turn
-            the idea into a real product, let&apos;s talk.
+            Bring the rough build, the stuck prototype, or the idea you cannot
+            stop thinking about. We will help you find the next real step.
           </p>
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <Button

@@ -2,9 +2,9 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 
 export const metadata = {
-  title: "Experience — AmpTech",
+  title: "Proof — AmpTech",
   description:
-    "How AmpTech establishes credibility before formal case studies exist.",
+    "How AmpTech shows its work before formal case studies exist.",
 };
 
 const proofBlocks = [
@@ -23,21 +23,21 @@ export default function WorkPage() {
     <SectionWrapper>
       <div className="max-w-5xl">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
-          Why Clients Hire AmpTech
+          Proof Of Work
         </p>
         <h1 className="display-type max-w-4xl text-[3.5rem] leading-[0.92] text-brand-ink sm:text-[4.7rem] md:text-[5.8rem]">
-          WHAT YOU
+          HOW TO
           <br />
-          SHOULD LOOK
+          TELL IF
           <br />
-          FOR IN
+          THE BUILD
           <br />
-          A GUIDE.
+          CAN WORK.
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-brand-gray">
           If you are deciding whether AmpTech is the right fit, start here. The
-          right guide should bring engineering experience, clear thinking, and
-          a process that makes you more confident, not more confused.
+          right partner should make the project clearer before they ask you to
+          commit to the build.
         </p>
 
         <div className="mt-16 grid gap-5 border-t border-black/10 pt-8 md:grid-cols-2">
@@ -59,9 +59,9 @@ export default function WorkPage() {
           </p>
           <div className="max-w-3xl space-y-4 text-base leading-relaxed text-brand-gray">
             <p>
-              You should know how the project will be scoped, what the tradeoffs
-              are, and who is making the technical decisions before development
-              begins.
+              You should know what can be kept, what needs rebuilding, what the
+              tradeoffs are, and who is making the technical decisions before
+              development begins.
             </p>
             <p>
               You should leave with the code, the infrastructure, and the

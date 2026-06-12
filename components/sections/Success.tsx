@@ -5,20 +5,20 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const outcomes = [
   {
-    headline: "A product you are proud to show people.",
-    body: "Not a prototype, not an MVP with 20 caveats.",
+    headline: "A product you can put in front of people.",
+    body: "Not a demo that only works when everything goes exactly right.",
   },
   {
-    headline: "A faster path to launch.",
-    body: "Built in weeks, not months, without sacrificing the foundation underneath it.",
+    headline: "A build that stops drifting.",
+    body: "Clear priorities, fewer loops, and progress you can actually measure.",
   },
   {
-    headline: "No lock-in. No dependency. No rug to pull.",
+    headline: "Ownership without a trap door.",
     body: "The code is yours. The infrastructure is yours. The direction is clear.",
   },
   {
-    headline: "Something you can actually run and grow.",
-    body: "Documented, handed over cleanly, and built to keep moving after launch.",
+    headline: "Something you can keep improving.",
+    body: "Documented, handed over cleanly, and built to move after launch.",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function Success() {
   return (
     <SectionWrapper>
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -56,20 +56,20 @@ export default function Success() {
           Success
         </p>
         <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-brand-ink sm:text-[4.3rem] md:text-[5.2rem]">
-          WHAT SUCCESS
+          WHAT CHANGES
           <br />
-          LOOKS LIKE
+          WHEN THE
           <br />
-          ON THE OTHER
+          PRODUCT IS
           <br />
-          SIDE.
+          REAL.
         </h2>
 
         <div className="grid gap-8 border-t border-black/10 pt-10 sm:grid-cols-2">
           {outcomes.map((item, i) => (
             <motion.div
               key={item.headline}
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}

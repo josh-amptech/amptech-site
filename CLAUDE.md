@@ -45,6 +45,24 @@ types/umami.d.ts        ← window.umami type declaration
 
 **GitHub:** https://github.com/josh-amptech/amptech-site
 
+## Codex + GitHub CLI
+
+Codex sandboxed shells do not reliably inherit or persist GitHub CLI auth. Attempts to
+bootstrap `GH_TOKEN`, PowerShell SecretStore, or other environment variables inside the
+sandbox may appear to work briefly and then fail with `HTTP 401`.
+
+When an agent needs `gh`, run it from the outside Windows context with escalated
+permissions instead of trying to repair sandbox auth:
+
+```powershell
+gh issue list --repo josh-amptech/amptech-site --state open
+gh issue view 13 --repo josh-amptech/amptech-site
+```
+
+For issue and PR reads, the GitHub connector is also acceptable when available. For
+GitHub writes, prefer the connector or an escalated Windows-context `gh` command, then
+verify the resulting issue/PR state.
+
 ## Brand
 
 Full brand guide: `docs/brand-guide.pdf` | Messaging guide: `AmpTech-Brand-Messaging-Guide-v2.docx`

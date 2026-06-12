@@ -23,7 +23,6 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(212, 30, 16, 0.09), transparent 28%),
     linear-gradient(180deg, #f7f2ea 0%, #f7f3ee 42%, #ffffff 100%);
   color: #4D4D4D;
 }
@@ -48,16 +47,16 @@ a {
   z-index: -1;
   pointer-events: none;
   background:
-    linear-gradient(120deg, rgba(212, 30, 16, 0.08), transparent 22%),
-    radial-gradient(circle at 80% 18%, rgba(212, 30, 16, 0.09), transparent 18%);
-  opacity: 0.9;
+    linear-gradient(120deg, rgba(212, 30, 16, 0.055), transparent 28%),
+    linear-gradient(180deg, rgba(11, 11, 12, 0.04), transparent 34%);
+  opacity: 0.75;
 }
 
 .hero-noise {
   position: relative;
   overflow: clip;
   background:
-    linear-gradient(135deg, rgba(11, 11, 12, 0.97) 0%, rgba(24, 24, 27, 0.96) 54%, rgba(212, 30, 16, 0.92) 100%);
+    linear-gradient(135deg, rgba(11, 11, 12, 0.99) 0%, rgba(19, 19, 21, 0.98) 62%, rgba(96, 16, 12, 0.96) 100%);
 }
 
 .hero-noise::before {
@@ -75,12 +74,9 @@ a {
 .hero-noise::after {
   content: "";
   position: absolute;
-  inset: auto -12% -20% auto;
-  width: min(50vw, 38rem);
-  height: min(50vw, 38rem);
-  border-radius: 9999px;
-  background: radial-gradient(circle, rgba(241, 236, 228, 0.32), transparent 68%);
-  filter: blur(24px);
+  inset: auto 0 0 0;
+  height: 1px;
+  background: rgba(241, 236, 228, 0.28);
 }
 
 .section-rule {
@@ -90,7 +86,6 @@ a {
 @media (max-width: 768px) {
   body {
     background:
-      radial-gradient(circle at top, rgba(212, 30, 16, 0.08), transparent 22%),
       linear-gradient(180deg, #f7f2ea 0%, #ffffff 72%);
   }
 }

@@ -6,18 +6,18 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 const steps = [
   {
     number: "01",
-    title: "Tell us what you want to build",
-    body: "Book a free 30-minute discovery call. Describe your idea without translating it into developer language first.",
+    title: "Show us where it stands",
+    body: "Bring the idea, prototype, repo, screenshots, or rough build. We will meet you where the project is.",
   },
   {
     number: "02",
-    title: "We scope, design, and price it",
-    body: "You get a build plan with real tradeoffs, timeline expectations, and cost before development starts.",
+    title: "Get a clear build plan",
+    body: "We identify what can be kept, what needs rebuilding, what it will take, and what should happen first.",
   },
   {
     number: "03",
-    title: "We build it and hand it over",
-    body: "You get tested software, deployment support, and ownership of the result instead of dependency on the process.",
+    title: "Launch with ownership",
+    body: "You get working software, deployment support, documentation, and the code in your hands.",
   },
 ];
 
@@ -25,7 +25,7 @@ export default function Plan() {
   return (
     <SectionWrapper className="bg-brand-night text-white">
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -34,18 +34,18 @@ export default function Plan() {
           The Plan
         </p>
         <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-brand-cream sm:text-[4.4rem] md:text-[5.4rem]">
-          A CLEAR PATH
+          A SIMPLE PATH
           <br />
-          FROM IDEA
+          FROM STUCK
           <br />
-          TO LAUNCH.
+          TO SHIPPED.
         </h2>
 
         <div className="grid gap-10 border-t border-white/14 pt-10 md:grid-cols-3 md:gap-8">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.12, ease: "easeOut" }}
