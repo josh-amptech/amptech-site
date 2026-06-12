@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/josh-amptech/amptech-site/compare/v1.2.0...v1.3.0) (2026-06-12)
+
+
+### Features
+
+* rename Proof nav and CTAs to How We Work ([#23](https://github.com/josh-amptech/amptech-site/issues/23)) ([3ab94e4](https://github.com/josh-amptech/amptech-site/commit/3ab94e46dd7bfd7a6018e7920ec3320c7a2e4962)), closes [#9](https://github.com/josh-amptech/amptech-site/issues/9)
+
 # [1.2.0](https://github.com/josh-amptech/amptech-site/compare/v1.1.0...v1.2.0) (2026-06-12)
 
 
