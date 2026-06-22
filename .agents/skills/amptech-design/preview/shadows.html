@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Spacing — Shadows & Elevation" subtitle="4-step + red-glow focus ring" viewport="700x180" -->
+<html><head><meta charset="utf-8"><title>Shadows & Elevation</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--gray-50); }
+  .frame { padding: 28px 26px; font-family: var(--font-body); }
+  .row { display:grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+  .item { display:flex; flex-direction:column; align-items:center; gap: 10px; }
+  .box { width: 84px; height: 64px; background: #fff; border-radius: var(--r-4); }
+  .tok { font-family: var(--font-mono); font-size: 11px; color: var(--fg2); }
+  .hint { font-size: 10px; color: var(--fg3); text-align:center; }
+</style></head>
+<body>
+<div class="frame">
+  <div class="row">
+    <div class="item"><div class="box" style="box-shadow: var(--shadow-1);"></div><div class="tok">shadow-1</div><div class="hint">Cards rest</div></div>
+    <div class="item"><div class="box" style="box-shadow: var(--shadow-2);"></div><div class="tok">shadow-2</div><div class="hint">Hover</div></div>
+    <div class="item"><div class="box" style="box-shadow: var(--shadow-3);"></div><div class="tok">shadow-3</div><div class="hint">Popover</div></div>
+    <div class="item"><div class="box" style="box-shadow: var(--shadow-4);"></div><div class="tok">shadow-4</div><div class="hint">Modal</div></div>
+    <div class="item"><div class="box" style="box-shadow: var(--shadow-red-glow), var(--shadow-1);"></div><div class="tok">red-glow</div><div class="hint">Focus / powered-on</div></div>
+  </div>
+</div>
+</body></html>

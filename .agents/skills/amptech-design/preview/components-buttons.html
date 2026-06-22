@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Components — Buttons" subtitle="Primary, secondary, ghost, link — with sizes & states" viewport="700x200" -->
+<html><head><meta charset="utf-8"><title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  .frame { padding: 22px 24px; font-family: var(--font-body); display:flex; flex-direction:column; gap: 14px; }
+  .row { display:flex; gap: 10px; align-items:center; flex-wrap: wrap; }
+  .btn { font-family: var(--font-body); font-weight: 600; font-size: 14px; padding: 10px 18px; border-radius: var(--r-3); border: 1px solid transparent; cursor: pointer; transition: all 150ms var(--ease-out); display:inline-flex; align-items:center; gap: 8px; line-height: 1; }
+  .btn-primary { background: var(--amp-red); color: #fff; }
+  .btn-primary:hover { background: var(--amp-red-hot); box-shadow: var(--shadow-2); }
+  .btn-secondary { background: var(--amp-ink); color: #fff; }
+  .btn-ghost { background: transparent; color: var(--fg1); border-color: var(--border-strong); }
+  .btn-ghost:hover { border-color: var(--amp-ink); }
+  .btn-link { background: transparent; color: var(--accent); padding: 0; border: 0; }
+  .btn-sm { font-size: 13px; padding: 7px 12px; }
+  .btn-lg { font-size: 15px; padding: 14px 22px; }
+  .btn .dot { width:6px; height:6px; background: currentColor; border-radius: var(--r-full); opacity: 0.8; }
+  .cap { font-size: 10px; color: var(--fg3); letter-spacing: .1em; text-transform: uppercase; font-weight:600; }
+</style></head>
+<body>
+<div class="frame">
+  <div class="row">
+    <button class="btn btn-primary">Book a prototype review →</button>
+    <button class="btn btn-secondary">See how we work</button>
+    <button class="btn btn-ghost">Read the playbook</button>
+    <button class="btn btn-link">View case study →</button>
+  </div>
+  <div class="row">
+    <button class="btn btn-primary btn-sm">Ship it</button>
+    <button class="btn btn-primary">Ship it</button>
+    <button class="btn btn-primary btn-lg">Ship it</button>
+    <button class="btn btn-primary" style="box-shadow: var(--shadow-red-glow);">Focused</button>
+    <button class="btn btn-primary" disabled style="opacity:.4;">Disabled</button>
+  </div>
+  <div class="cap">Primary · Secondary · Ghost · Link · Sizes SM/MD/LG</div>
+</div>
+</body></html>

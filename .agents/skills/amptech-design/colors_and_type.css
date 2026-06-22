@@ -1,0 +1,466 @@
+/* =========================================================================
+   AmpTech Design System — Colors & Type
+   Brand: AmpTech — from prototype to production.
+   ========================================================================= */
+
+/* --- Font imports ---------------------------------------------------------
+   Space Grotesk: official display font — loaded from local brand font file
+   Inter: official body/UI font — Google Fonts
+   JetBrains Mono: official mono font — Google Fonts
+   ------------------------------------------------------------------------ */
+
+/* Space Grotesk — local variable font (official brand asset) */
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter + JetBrains Mono — Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* ---------- BRAND CORE -------------------------------------------------- */
+  --amp-red:        #D41E10;   /* official brand red — HEX #D41E10 R212 G30 B16 */
+  --amp-red-hot:    #EE2415;   /* interactive/hover accent */
+  --amp-red-deep:   #A21508;   /* pressed / on-red emphasis */
+  --amp-red-ember:  #680E06;   /* deep tint for dark mode backgrounds */
+
+  --amp-steel:      #4D4D4D;   /* official brand gray — HEX #4D4D4D R77 G77 B77 */
+  --amp-ink:        #141414;   /* near-black (softened from brand #000000) */
+  --amp-charcoal:   #1A1C20;
+  --amp-graphite:   #2A2D33;
+
+  /* ---------- NEUTRALS (warm-cool balanced; slight bluish-graphite) ------- */
+  --gray-0:   #FFFFFF;
+  --gray-50:  #F7F7F8;
+  --gray-100: #EEEEF0;
+  --gray-200: #DEDFE3;
+  --gray-300: #C4C6CC;
+  --gray-400: #9AA0A8;
+  --gray-500: #6B7280;
+  --gray-600: #4B5057;
+  --gray-700: #2F333A;
+  --gray-800: #1A1C20;
+  --gray-900: #141414;
+
+  /* ---------- SEMANTIC: LIGHT (default) ----------------------------------- */
+  --bg:         var(--gray-0);
+  --bg-subtle:  var(--gray-50);
+  --bg-muted:   var(--gray-100);
+  --bg-inverse: var(--amp-ink);
+
+  --surface:          #FFFFFF;
+  --surface-raised:   #FFFFFF;
+  --surface-sunken:   var(--gray-50);
+
+  --fg1: var(--gray-900);          /* primary type */
+  --fg2: var(--gray-700);          /* secondary type */
+  --fg3: var(--gray-500);          /* tertiary/meta */
+  --fg-muted: var(--gray-400);
+  --fg-on-red: #FFFFFF;
+  --fg-on-ink: #FFFFFF;
+
+  --border:          var(--gray-200);
+  --border-strong:   var(--gray-300);
+  --border-inverse:  #2A2D33;
+  --divider:         var(--gray-100);
+
+  --accent:          var(--amp-red);
+  --accent-hover:    var(--amp-red-hot);
+  --accent-pressed:  var(--amp-red-deep);
+  --accent-fg:       #FFFFFF;
+  --accent-subtle:   #FDECEA;      /* tinted backgrounds */
+  --accent-subtle-border: #F5C8C5;
+
+  /* ---------- STATUS ------------------------------------------------------ */
+  --success:      #0F8D4E;
+  --success-subtle: #E6F5EC;
+  --warning:      #C77700;
+  --warning-subtle: #FDF2E0;
+  --danger:       var(--amp-red);   /* aligns with brand */
+  --danger-subtle: #FDECEA;
+  --info:         #1D6FE0;
+  --info-subtle:  #E7F0FC;
+
+  /* ---------- FONTS ------------------------------------------------------- */
+  --font-display: "Space Grotesk", sans-serif;   /* official brand display font */
+  --font-body:    "Inter", sans-serif;             /* official brand body font */
+  --font-mono:    "JetBrains Mono", monospace;     /* official brand mono font */
+
+  /* ---------- TYPE SCALE (major-third-ish, engineered feel) --------------- */
+  /* font sizes */
+  --fs-display: 72px;   /* @kind font */
+  --fs-h1:      56px;   /* @kind font */
+  --fs-h2:      40px;   /* @kind font */
+  --fs-h3:      28px;   /* @kind font */
+  --fs-h4:      20px;   /* @kind font */
+  --fs-lg:      18px;   /* @kind font */
+  --fs-body:    16px;   /* @kind font */
+  --fs-sm:      14px;   /* @kind font */
+  --fs-xs:      12px;   /* @kind font */
+  --fs-eyebrow: 12px;   /* @kind font */
+  --fs-code:    14px;   /* @kind font */
+
+  /* line-heights (unitless ratios) */
+  --lh-display: 1.04;   /* @kind other */
+  --lh-h1:      1.06;   /* @kind other */
+  --lh-h2:      1.1;    /* @kind other */
+  --lh-h3:      1.2;    /* @kind other */
+  --lh-h4:      1.3;    /* @kind other */
+  --lh-lg:      1.55;   /* @kind other */
+  --lh-body:    1.6;    /* @kind other */
+  --lh-sm:      1.5;    /* @kind other */
+  --lh-xs:      1.4;    /* @kind other */
+  --lh-code:    1.55;   /* @kind other */
+
+  /* tracking / letter-spacing */
+  --tr-display: -0.03em;   /* @kind other */
+  --tr-h1:      -0.025em;  /* @kind other */
+  --tr-h2:      -0.02em;   /* @kind other */
+  --tr-h3:      -0.015em;  /* @kind other */
+  --tr-h4:      -0.01em;   /* @kind other */
+  --ls-eyebrow: 0.14em;    /* @kind other */
+
+  /* ---------- SPACING (4pt base, engineered) ------------------------------ */
+  --s-0: 0;   /* @kind spacing */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-7: 32px;
+  --s-8: 40px;
+  --s-9: 56px;
+  --s-10: 72px;
+  --s-11: 96px;
+  --s-12: 128px;
+
+  /* ---------- RADII (angular; more cut than soft) ------------------------- */
+  --r-0: 0px;
+  --r-1: 2px;
+  --r-2: 4px;     /* default small elements */
+  --r-3: 6px;     /* buttons, inputs */
+  --r-4: 10px;    /* cards */
+  --r-5: 14px;    /* large cards/modals */
+  --r-full: 999px;
+
+  /* ---------- BORDERS ---------------------------------------------------- */
+  --bw-1: 1px;
+  --bw-2: 2px;
+  --bw-3: 3px;    /* accent edges, left-bars */
+
+  /* ---------- SHADOWS (precise; never soft & cloudy) ---------------------- */
+  --shadow-1: 0 1px 2px rgba(12, 13, 16, 0.06), 0 0 0 1px rgba(12,13,16,0.04);
+  --shadow-2: 0 2px 6px rgba(12, 13, 16, 0.08), 0 1px 2px rgba(12,13,16,0.04);
+  --shadow-3: 0 8px 24px rgba(12, 13, 16, 0.10), 0 2px 6px rgba(12,13,16,0.06);
+  --shadow-4: 0 20px 48px rgba(12, 13, 16, 0.18), 0 4px 12px rgba(12,13,16,0.08);
+  --shadow-red-glow: 0 0 0 3px rgba(216, 16, 32, 0.18);  /* focus, emphasis */
+  --shadow-inset: inset 0 0 0 1px rgba(12,13,16,0.08);
+
+  /* ---------- MOTION ------------------------------------------------------ */
+  --ease-out:   cubic-bezier(0.2, 0.8, 0.2, 1);     /* @kind other */
+  --ease-in:    cubic-bezier(0.4, 0, 1, 1);          /* @kind other */
+  --ease-inout: cubic-bezier(0.4, 0.0, 0.2, 1);      /* @kind other */
+  --ease-snap:  cubic-bezier(0.2, 0.9, 0.1, 1.05);   /* @kind other */
+  --dur-fast:   120ms;   /* @kind other */
+  --dur-base:   200ms;   /* @kind other */
+  --dur-slow:   320ms;   /* @kind other */
+
+  /* ---------- BREAKPOINTS ------------------------------------------------- */
+  --bp-xs:  390px;   /* small phone */
+  --bp-sm:  640px;   /* large phone / small tablet */
+  --bp-md:  768px;   /* tablet portrait */
+  --bp-lg:  1024px;  /* tablet landscape / small desktop */
+  --bp-xl:  1280px;  /* desktop */
+  --bp-2xl: 1440px;  /* wide desktop */
+
+  /* ---------- LAYOUT ------------------------------------------------------ */
+  --container-sm: 640px;
+  --container:    1120px;
+  --container-lg: 1280px;
+  --container-xl: 1440px;
+
+  /* ---------- TOUCH TARGETS ----------------------------------------------- */
+  --touch-min: 44px;   /* minimum tap target height/width (WCAG 2.5.5) */
+
+  /* ---------- GRADIENTS / SURFACES (controlled, not candy) ---------------- */
+  --grad-ember: linear-gradient(135deg, #EE2415 0%, #A21508 100%);   /* @kind color */
+  --grad-ink:   linear-gradient(180deg, #242424 0%, #141414 100%);   /* @kind color */
+  --grad-steel: linear-gradient(180deg, #333333 0%, #141414 100%);   /* @kind color */
+  --grad-protect-top:    linear-gradient(180deg, rgba(20,20,20,0.6), transparent);   /* @kind color */
+  --grad-protect-bottom: linear-gradient(0deg, rgba(20,20,20,0.8), transparent);     /* @kind color */
+}
+
+/* ---------- DARK THEME ---------------------------------------------------- */
+[data-theme="dark"], .theme-dark {
+  --bg:         var(--amp-ink);
+  --bg-subtle:  var(--amp-charcoal);
+  --bg-muted:   var(--amp-graphite);
+  --bg-inverse: #FFFFFF;
+
+  --surface:        var(--amp-charcoal);
+  --surface-raised: #23262C;
+  --surface-sunken: var(--amp-ink);
+
+  --fg1: #F4F5F7;
+  --fg2: #C4C6CC;
+  --fg3: #9AA0A8;
+  --fg-muted: #6B7280;
+
+  --border:        #2A2D33;
+  --border-strong: #3A3E45;
+  --divider:       #23262C;
+
+  --accent:         var(--amp-red-hot);
+  --accent-hover:   #FF4450;
+  --accent-pressed: var(--amp-red);
+  --accent-subtle:  rgba(242, 31, 48, 0.14);
+  --accent-subtle-border: rgba(242, 31, 48, 0.35);
+
+  --shadow-1: 0 1px 2px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+  --shadow-2: 0 2px 8px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-3: 0 10px 28px rgba(0,0,0,0.7), 0 2px 6px rgba(0,0,0,0.5);
+  --shadow-4: 0 24px 56px rgba(0,0,0,0.8), 0 6px 14px rgba(0,0,0,0.6);
+}
+
+/* =========================================================================
+   BASE TYPOGRAPHY — semantic classes you can apply directly
+   ========================================================================= */
+
+body, .amp-body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg1);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.amp-display {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tr-display);
+  font-weight: 600;
+  color: var(--fg1);
+  text-wrap: balance;
+}
+
+h1, .amp-h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--tr-h1);
+  font-weight: 600;
+  color: var(--fg1);
+  text-wrap: balance;
+}
+
+h2, .amp-h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--tr-h2);
+  font-weight: 600;
+  color: var(--fg1);
+  text-wrap: balance;
+}
+
+h3, .amp-h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--tr-h3);
+  font-weight: 600;
+  color: var(--fg1);
+}
+
+h4, .amp-h4 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+  letter-spacing: var(--tr-h4);
+  font-weight: 600;
+  color: var(--fg1);
+}
+
+p, .amp-p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg2);
+  text-wrap: pretty;
+}
+
+.amp-lead {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-lg);
+  color: var(--fg2);
+}
+
+.amp-small {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  color: var(--fg3);
+}
+
+.amp-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.amp-eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: var(--accent);
+}
+
+code, .amp-code, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: var(--fs-code);
+  line-height: var(--lh-code);
+  background: var(--bg-muted);
+  padding: 2px 6px;
+  border-radius: var(--r-2);
+  color: var(--fg1);
+}
+
+.amp-metric {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+a, .amp-link {
+  color: var(--accent);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover, .amp-link:hover { color: var(--accent-hover); text-decoration: underline; }
+
+::selection { background: var(--amp-red); color: #fff; }
+
+/* --- Utility: the brand "bolt-bar" accent line used throughout ----------- */
+.amp-bolt-bar {
+  position: relative;
+  padding-left: 14px;
+}
+.amp-bolt-bar::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.25em; bottom: 0.25em;
+  width: 3px;
+  background: var(--accent);
+}
+
+
+/* =========================================================================
+   RESPONSIVE TYPE SCALE — mobile-first
+   Base sizes above are desktop. These override downward at smaller viewports.
+   ========================================================================= */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --fs-display: 56px;
+    --fs-h1:      44px;
+    --fs-h2:      32px;
+    --fs-h3:      24px;
+    --fs-h4:      18px;
+    --fs-lg:      17px;
+  }
+}
+
+/* Large phone / tablet portrait (≤768px) */
+@media (max-width: 768px) {
+  :root {
+    --fs-display: 44px;
+    --fs-h1:      36px;
+    --fs-h2:      28px;
+    --fs-h3:      22px;
+    --fs-h4:      17px;
+    --fs-lg:      16px;
+    --fs-body:    15px;
+  }
+}
+
+/* Phone (≤640px) */
+@media (max-width: 640px) {
+  :root {
+    --fs-display: 36px;   /* @kind font */
+    --lh-display: 1.08;   /* @kind other */
+    --fs-h1:      30px;   /* @kind font */
+    --lh-h1:      1.1;    /* @kind other */
+    --fs-h2:      24px;   /* @kind font */
+    --lh-h2:      1.15;   /* @kind other */
+    --fs-h3:      20px;   /* @kind font */
+    --lh-h3:      1.25;   /* @kind other */
+    --fs-h4:      16px;   /* @kind font */
+    --fs-lg:      16px;   /* @kind font */
+    --fs-body:    15px;   /* @kind font */
+    --fs-sm:      13px;   /* @kind font */
+    --s-10:       56px;   /* @kind spacing */
+    --s-11:       72px;   /* @kind spacing */
+    --s-12:       96px;   /* @kind spacing */
+  }
+}
+
+/* =========================================================================
+   MOBILE-FIRST UTILITY CLASSES
+   ========================================================================= */
+
+/* Touch-safe interactive targets */
+.amp-touch { min-height: var(--touch-min); min-width: var(--touch-min); }
+
+/* Responsive container */
+.amp-container {
+  width: 100%;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--s-4);
+  padding-right: var(--s-4);
+}
+@media (min-width: 640px) {
+  .amp-container { padding-left: var(--s-6); padding-right: var(--s-6); }
+}
+@media (min-width: 1024px) {
+  .amp-container { padding-left: var(--s-8); padding-right: var(--s-8); }
+}
+
+/* Responsive grid helpers */
+.amp-grid-2 { display: grid; grid-template-columns: 1fr; gap: var(--s-4); }
+.amp-grid-3 { display: grid; grid-template-columns: 1fr; gap: var(--s-4); }
+.amp-grid-4 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); }
+
+@media (min-width: 640px) {
+  .amp-grid-2 { grid-template-columns: 1fr 1fr; }
+  .amp-grid-3 { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  .amp-grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .amp-grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Show/hide helpers */
+.amp-mobile-only  { display: block; }
+.amp-desktop-only { display: none; }
+@media (min-width: 768px) {
+  .amp-mobile-only  { display: none; }
+  .amp-desktop-only { display: block; }
+}
