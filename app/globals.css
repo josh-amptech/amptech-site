@@ -128,22 +128,26 @@
 
 /* =========================================================================
    BASE — flat surfaces. No cream gradient body, no fixed gradient overlay.
+   Kept in @layer base so Tailwind utilities (e.g. text-white on link-buttons)
+   still win — unlayered rules would otherwise beat every utility.
    ========================================================================= */
-html { scroll-behavior: smooth; }
+@layer base {
+  html { scroll-behavior: smooth; }
 
-body {
-  background: var(--bg);              /* flat — was a warm cream gradient */
-  color: var(--fg2);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  body {
+    background: var(--bg);              /* flat — was a warm cream gradient */
+    color: var(--fg2);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: var(--accent); text-underline-offset: 0.2em; }
+  a:hover { color: var(--accent-hover); }
+
+  ::selection { background: var(--color-amp-red); color: #fff; }
 }
-
-a { color: var(--accent); text-underline-offset: 0.2em; }
-a:hover { color: var(--accent-hover); }
-
-::selection { background: var(--color-amp-red); color: #fff; }
 
 /* Headlines use the display font in SENTENCE CASE — never forced uppercase. */
 .display-type {
