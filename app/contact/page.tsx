@@ -47,9 +47,9 @@ export default function ContactPage() {
     return (
       <SectionWrapper className="min-h-[60vh] flex items-center">
         <div className="max-w-lg mx-auto text-center">
-          <div className="w-12 h-12 rounded-full bg-brand-red-light flex items-center justify-center mx-auto mb-6">
+          <div className="w-12 h-12 rounded-full bg-amp-red/10 flex items-center justify-center mx-auto mb-6">
             <svg
-              className="w-6 h-6 text-brand-red"
+              className="w-6 h-6 text-amp-red"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -62,15 +62,15 @@ export default function ContactPage() {
               />
             </svg>
           </div>
-          <h2 className="text-3xl font-bold text-brand-black mb-4">
+          <h2 className="text-3xl font-bold text-amp-ink mb-4">
             Request received.
           </h2>
-          <p className="text-base text-brand-gray leading-relaxed">
+          <p className="text-base text-[var(--fg2)] leading-relaxed">
             Thanks for reaching out. Your request was submitted successfully.
             If you prefer, you can also email{" "}
             <a
               href="mailto:hello@amptech.dev"
-              className="text-brand-red underline underline-offset-4"
+              className="text-amp-red underline underline-offset-4"
             >
               hello@amptech.dev
             </a>
@@ -84,13 +84,13 @@ export default function ContactPage() {
   return (
     <SectionWrapper>
       <div className="max-w-xl">
-        <p className="text-sm font-medium uppercase tracking-wide text-brand-red mb-4">
+        <p className="text-sm font-medium uppercase tracking-wide text-amp-red mb-4">
           Get Started
         </p>
-        <h1 className="text-5xl font-bold tracking-tight text-brand-black mb-4">
+        <h1 className="text-5xl font-bold tracking-tight text-amp-ink mb-4">
           Book a Free Discovery Call
         </h1>
-        <p className="text-base text-brand-gray leading-relaxed mb-10">
+        <p className="text-base text-[var(--fg2)] leading-relaxed mb-10">
           Tell us about your idea. No technical knowledge required — just
           describe what you want to build and we&apos;ll take it from there.
         </p>
@@ -100,22 +100,22 @@ export default function ContactPage() {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-brand-black mb-2"
+              className="block text-sm font-medium text-amp-ink mb-2"
             >
-              Name <span className="text-brand-red">*</span>
+              Name <span className="text-amp-red">*</span>
             </label>
             <input
               id="name"
               type="text"
               autoComplete="name"
-              className={`w-full border rounded px-4 py-3 text-base text-brand-black placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-brand-red transition ${
-                errors.name ? "border-brand-red" : "border-gray-300"
+              className={`w-full border rounded px-4 py-3 text-base text-amp-ink placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-amp-red transition ${
+                errors.name ? "border-amp-red" : "border-gray-300"
               }`}
               placeholder="Your full name"
               {...register("name", { required: "Name is required" })}
             />
             {errors.name && (
-              <p className="mt-1.5 text-sm text-brand-red">
+              <p className="mt-1.5 text-sm text-amp-red">
                 {errors.name.message}
               </p>
             )}
@@ -125,16 +125,16 @@ export default function ContactPage() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-brand-black mb-2"
+              className="block text-sm font-medium text-amp-ink mb-2"
             >
-              Email <span className="text-brand-red">*</span>
+              Email <span className="text-amp-red">*</span>
             </label>
             <input
               id="email"
               type="email"
               autoComplete="email"
-              className={`w-full border rounded px-4 py-3 text-base text-brand-black placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-brand-red transition ${
-                errors.email ? "border-brand-red" : "border-gray-300"
+              className={`w-full border rounded px-4 py-3 text-base text-amp-ink placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-amp-red transition ${
+                errors.email ? "border-amp-red" : "border-gray-300"
               }`}
               placeholder="you@example.com"
               {...register("email", {
@@ -146,7 +146,7 @@ export default function ContactPage() {
               })}
             />
             {errors.email && (
-              <p className="mt-1.5 text-sm text-brand-red">
+              <p className="mt-1.5 text-sm text-amp-red">
                 {errors.email.message}
               </p>
             )}
@@ -156,15 +156,15 @@ export default function ContactPage() {
           <div>
             <label
               htmlFor="idea"
-              className="block text-sm font-medium text-brand-black mb-2"
+              className="block text-sm font-medium text-amp-ink mb-2"
             >
-              Tell us about your idea <span className="text-brand-red">*</span>
+              Tell us about your idea <span className="text-amp-red">*</span>
             </label>
             <textarea
               id="idea"
               rows={5}
-              className={`w-full border rounded px-4 py-3 text-base text-brand-black placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-brand-red transition resize-none ${
-                errors.idea ? "border-brand-red" : "border-gray-300"
+              className={`w-full border rounded px-4 py-3 text-base text-amp-ink placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-amp-red transition resize-none ${
+                errors.idea ? "border-amp-red" : "border-gray-300"
               }`}
               placeholder="Describe the app you want to build — what it does, who it's for, and any context that helps us understand it."
               {...register("idea", {
@@ -176,7 +176,7 @@ export default function ContactPage() {
               })}
             />
             {errors.idea && (
-              <p className="mt-1.5 text-sm text-brand-red">
+              <p className="mt-1.5 text-sm text-amp-red">
                 {errors.idea.message}
               </p>
             )}
@@ -184,7 +184,7 @@ export default function ContactPage() {
 
           {/* Tried before */}
           <div>
-            <p className="block text-sm font-medium text-brand-black mb-3">
+            <p className="block text-sm font-medium text-amp-ink mb-3">
               Have you tried to build this before?
             </p>
             <div className="flex gap-4">
@@ -192,19 +192,19 @@ export default function ContactPage() {
                 <input
                   type="radio"
                   value="true"
-                  className="accent-brand-red"
+                  className="accent-amp-red"
                   {...register("triedBefore")}
                 />
-                <span className="text-sm text-brand-gray">Yes</span>
+                <span className="text-sm text-[var(--fg2)]">Yes</span>
               </label>
               <label className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="radio"
                   value="false"
-                  className="accent-brand-red"
+                  className="accent-amp-red"
                   {...register("triedBefore")}
                 />
-                <span className="text-sm text-brand-gray">No</span>
+                <span className="text-sm text-[var(--fg2)]">No</span>
               </label>
             </div>
           </div>
@@ -213,13 +213,13 @@ export default function ContactPage() {
           <div>
             <label
               htmlFor="timeline"
-              className="block text-sm font-medium text-brand-black mb-2"
+              className="block text-sm font-medium text-amp-ink mb-2"
             >
               Rough timeline in mind?
             </label>
             <select
               id="timeline"
-              className="w-full border border-gray-300 rounded px-4 py-3 text-base text-brand-black outline-none focus:ring-2 focus:ring-brand-red transition bg-white"
+              className="w-full border border-gray-300 rounded px-4 py-3 text-base text-amp-ink outline-none focus:ring-2 focus:ring-amp-red transition bg-white"
               {...register("timeline")}
             >
               <option value="">Select one</option>
@@ -231,7 +231,7 @@ export default function ContactPage() {
           </div>
 
           {error && (
-            <p className="text-sm text-brand-red">
+            <p className="text-sm text-amp-red">
               Submissions are not configured on this deployment yet. Please
               email us directly at{" "}
               <a

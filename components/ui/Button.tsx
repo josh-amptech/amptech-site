@@ -5,15 +5,15 @@ type Variant = "primary" | "secondary" | "ghost";
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-brand-red text-white hover:bg-[#b8190d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-red",
+    "bg-amp-red text-white hover:bg-amp-red-hot focus-visible:outline-none focus-visible:shadow-[var(--shadow-red-glow)]",
   secondary:
     "border border-current text-current hover:bg-current hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current",
   ghost:
-    "text-brand-red hover:underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-red",
+    "text-amp-red hover:underline underline-offset-4 focus-visible:outline-none focus-visible:shadow-[var(--shadow-red-glow)]",
 };
 
 const base =
-  "inline-flex cursor-pointer items-center justify-center rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] transition-all duration-200";
+  "inline-flex cursor-pointer items-center justify-center rounded-md px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] transition-all duration-200";
 
 type LinkButtonProps = {
   variant?: Variant;

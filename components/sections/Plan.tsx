@@ -23,17 +23,17 @@ const steps = [
 
 export default function Plan() {
   return (
-    <SectionWrapper className="bg-brand-night text-white">
+    <SectionWrapper className="bg-amp-ink text-white">
       <motion.div
         initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red-light/80">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red/80">
           The Plan
         </p>
-        <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-brand-cream sm:text-[4.4rem] md:text-[5.4rem]">
+        <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-white sm:text-[4.4rem] md:text-[5.4rem]">
           A SIMPLE PATH
           <br />
           FROM STUCK

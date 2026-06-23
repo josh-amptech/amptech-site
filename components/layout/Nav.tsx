@@ -9,7 +9,7 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-night/80 text-white backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-amp-ink/80 text-white backdrop-blur-xl">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" aria-label="AmpTech home">

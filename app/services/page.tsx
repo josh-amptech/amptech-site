@@ -30,17 +30,17 @@ export default function ServicesPage() {
   return (
     <SectionWrapper>
       <div className="max-w-5xl">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
           Services
         </p>
-        <h1 className="display-type max-w-4xl text-[3.5rem] leading-[0.92] text-brand-ink sm:text-[4.7rem] md:text-[5.8rem]">
+        <h1 className="display-type max-w-4xl text-[3.5rem] leading-[0.92] text-amp-ink sm:text-[4.7rem] md:text-[5.8rem]">
           FROM STUCK
           <br />
           TO SHIPPED,
           <br />
           DONE RIGHT.
         </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-brand-gray">
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--fg2)]">
           AmpTech helps founders and business owners turn rough prototypes,
           stalled AI builds, and app ideas into software that holds up under
           real use.
@@ -49,10 +49,10 @@ export default function ServicesPage() {
         <div className="mt-16 grid gap-5 border-t border-black/10 pt-8 md:grid-cols-2">
           {serviceAreas.map((service) => (
             <div key={service.title} className="section-rule pt-5">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-red">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amp-red">
                 {service.title}
               </p>
-              <p className="text-base leading-relaxed text-brand-gray">
+              <p className="text-base leading-relaxed text-[var(--fg2)]">
                 {service.body}
               </p>
             </div>
@@ -60,10 +60,10 @@ export default function ServicesPage() {
         </div>
 
         <div className="mt-16 border-t border-black/10 pt-8">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
             Engagement Model
           </p>
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-brand-gray">
+          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-[var(--fg2)]">
             <p>
               Every engagement starts with a discovery call. If the build is a
               fit, the next step is scoped planning so you know what can be

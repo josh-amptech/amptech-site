@@ -21,13 +21,13 @@ export default function SocialProof() {
       >
         <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
           <div className="max-w-xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
               Confidence
             </p>
-            <h2 className="display-type mb-4 text-[3rem] leading-[0.92] text-brand-ink sm:text-[3.9rem] md:text-[4.6rem]">
+            <h2 className="display-type mb-4 text-[3rem] leading-[0.92] text-amp-ink sm:text-[3.9rem] md:text-[4.6rem]">
               Look before you book.
             </h2>
-            <p className="text-lg leading-relaxed text-brand-gray">
+            <p className="text-lg leading-relaxed text-[var(--fg2)]">
               You should not have to trust a big claim on a small website. You
               should be able to see how we think, how we scope, and what kind
               of work we can carry across the finish line.
@@ -35,8 +35,8 @@ export default function SocialProof() {
             <div className="mt-10 space-y-5 border-t border-black/10 pt-6">
               {proofPoints.map((point) => (
                 <div key={point} className="flex items-start gap-3">
-                  <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-brand-red" />
-                  <p className="text-base leading-relaxed text-brand-gray">
+                  <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-amp-red" />
+                  <p className="text-base leading-relaxed text-[var(--fg2)]">
                     {point}
                   </p>
                 </div>
@@ -47,7 +47,7 @@ export default function SocialProof() {
             <Button
               href="/work"
               variant="secondary"
-              className="border-brand-ink text-brand-ink hover:bg-brand-ink"
+              className="border-amp-ink text-amp-ink hover:bg-amp-ink"
               data-umami-event="cta-click"
               data-umami-event-label="experience-proof"
             >

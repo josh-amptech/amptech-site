@@ -24,20 +24,20 @@ const features = [
 
 export default function Guide() {
   return (
-    <SectionWrapper className="bg-brand-gray-bg">
+    <SectionWrapper className="bg-[var(--bg-subtle)]">
       <motion.div
         initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
           Why AmpTech
         </p>
 
         <div className="grid gap-12 border-t border-black/10 pt-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
           <div>
-            <p className="display-type max-w-3xl text-[3.3rem] leading-[0.92] text-brand-ink sm:text-[4.4rem] md:text-[5.5rem]">
+            <p className="display-type max-w-3xl text-[3.3rem] leading-[0.92] text-amp-ink sm:text-[4.4rem] md:text-[5.5rem]">
               YOU NEED
               <br />
               SOMEONE WHO
@@ -50,7 +50,7 @@ export default function Guide() {
             </p>
           </div>
           <div>
-            <p className="text-lg leading-relaxed text-brand-gray">
+            <p className="text-lg leading-relaxed text-[var(--fg2)]">
               AmpTech brings senior engineering judgment to the messy middle of
               a build: the point where a prototype exists, but the product is
               not stable enough to sell, demo, or depend on.
@@ -68,10 +68,10 @@ export default function Guide() {
               transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
               className="section-rule pt-5"
             >
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-red">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amp-red">
                 {feature.title}
               </p>
-              <p className="text-base leading-relaxed text-brand-gray">
+              <p className="text-base leading-relaxed text-[var(--fg2)]">
                 {feature.description}
               </p>
             </motion.div>

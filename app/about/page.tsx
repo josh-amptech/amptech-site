@@ -12,42 +12,42 @@ export default function AboutPage() {
   return (
     <SectionWrapper>
       <div className="max-w-2xl">
-        <p className="text-sm font-medium uppercase tracking-wide text-brand-red mb-4">
+        <p className="text-sm font-medium uppercase tracking-wide text-amp-red mb-4">
           About
         </p>
-        <h1 className="display-type text-[3.5rem] leading-[0.92] text-brand-ink mb-6 sm:text-[4.7rem] md:text-[5.8rem]">
+        <h1 className="display-type text-[3.5rem] leading-[0.92] text-amp-ink mb-6 sm:text-[4.7rem] md:text-[5.8rem]">
           THE HELP
           <br />
           BEHIND THE
           <br />
           BUILD.
         </h1>
-        <p className="text-lg text-brand-gray leading-relaxed mb-6">
+        <p className="text-lg text-[var(--fg2)] leading-relaxed mb-6">
           AmpTech was founded for the moment when a promising build stops
           moving. The demo exists. The idea is still strong. But the project
           needs experienced engineering to become something real users can rely
           on.
         </p>
-        <p className="text-base text-brand-gray leading-relaxed mb-6">
+        <p className="text-base text-[var(--fg2)] leading-relaxed mb-6">
           We work with founders and business owners who have momentum, clarity,
           and a real product vision, but need help getting from rough version to
           launch-ready software.
         </p>
-        <p className="text-base text-brand-gray leading-relaxed mb-10">
+        <p className="text-base text-[var(--fg2)] leading-relaxed mb-10">
           We use modern AI-assisted development tools where they help, but the
           work is led by engineering judgment: architecture, tradeoffs,
           debugging, deployment, and clean ownership.
         </p>
         <div className="border border-gray-200 p-8 mb-10">
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand-red mb-4">
+          <p className="text-sm font-semibold uppercase tracking-widest text-amp-red mb-4">
             What You Can Expect
           </p>
-          <p className="text-base text-brand-gray leading-relaxed mb-4">
+          <p className="text-base text-[var(--fg2)] leading-relaxed mb-4">
             20+ years of professional software development experience, direct
             communication, transparent scoping, and references from people who
             have worked with us directly.
           </p>
-          <p className="text-base text-brand-gray leading-relaxed">
+          <p className="text-base text-[var(--fg2)] leading-relaxed">
             The goal is simple: help you get from stuck build to real software
             without having to become a developer yourself.
           </p>
