@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/josh-amptech/amptech-site/compare/v1.5.0...v1.6.0) (2026-06-23)
+
+
+### Features
+
+* apply design-system signature elements + Lucide (Phase 3) ([#31](https://github.com/josh-amptech/amptech-site/issues/31)) ([560686c](https://github.com/josh-amptech/amptech-site/commit/560686c674b6c0a036ba01f1a13d241dcd7b1e87)), closes [#28](https://github.com/josh-amptech/amptech-site/issues/28) [#19](https://github.com/josh-amptech/amptech-site/issues/19) [#28](https://github.com/josh-amptech/amptech-site/issues/28)
+
 # [1.5.0](https://github.com/josh-amptech/amptech-site/compare/v1.4.0...v1.5.0) (2026-06-23)
 
 
