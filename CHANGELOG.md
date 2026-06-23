@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/josh-amptech/amptech-site/compare/v1.3.0...v1.4.0) (2026-06-23)
+
+
+### Features
+
+* wire in amptech-design skill + repoint CLAUDE.md (Phase 0) ([#29](https://github.com/josh-amptech/amptech-site/issues/29)) ([a8536f8](https://github.com/josh-amptech/amptech-site/commit/a8536f82c34d15c5b4fa3f694c32b827a731fc3c)), closes [anthropics/claude-code#69313](https://github.com/anthropics/claude-code/issues/69313) [#26](https://github.com/josh-amptech/amptech-site/issues/26)
+
 # [1.3.0](https://github.com/josh-amptech/amptech-site/compare/v1.2.0...v1.3.0) (2026-06-12)
 
 
