@@ -1,0 +1,21 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Brand — Metric Callout" subtitle="Mono numerics on ink with red bolt-bars" viewport="700x220" -->
+<html><head><meta charset="utf-8"><title>Metric Callout</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--amp-ink); }
+  .frame { padding: 26px 28px; font-family: var(--font-body); display:grid; grid-template-columns: repeat(4, 1fr); gap: 20px; color: #fff; }
+  .m { display:flex; flex-direction:column; gap: 6px; border-left: 3px solid var(--amp-red); padding-left: 14px; }
+  .num { font-family: var(--font-mono); font-size: 40px; font-weight: 600; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1; }
+  .unit { color: var(--amp-red); }
+  .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: .14em; color: #9AA0A8; font-weight: 600; }
+  .sub { font-size: 12px; color: #C4C6CC; line-height: 1.4; }
+</style></head>
+<body>
+<div class="frame">
+  <div class="m"><div class="lbl">Prototypes reviewed</div><div class="num">138</div><div class="sub">Since 2024. Average 5 production-critical findings each.</div></div>
+  <div class="m"><div class="lbl">Median ship-to-prod</div><div class="num">21<span class="unit">d</span></div><div class="sub">From engagement start to first live traffic.</div></div>
+  <div class="m"><div class="lbl">Prod reliability</div><div class="num">99.95<span class="unit">%</span></div><div class="sub">Rolling 90-day across managed engagements.</div></div>
+  <div class="m"><div class="lbl">Handoffs refused</div><div class="num">0</div><div class="sub">We finish what we start, or we tell you why we won't.</div></div>
+</div>
+</body></html>

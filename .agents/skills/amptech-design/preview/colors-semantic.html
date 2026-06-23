@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Colors — Semantic" subtitle="Success, warning, danger (brand red), info" viewport="700x200" -->
+<html><head><meta charset="utf-8"><title>Semantic Colors</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  .frame { padding: 20px 24px; font-family: var(--font-body); display: flex; flex-direction: column; gap: 16px; }
+
+  /* top row — swatches in brand context */
+  .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .sw { border-radius: var(--r-3); overflow: hidden; border: 1px solid var(--border); }
+  .sw-fill { height: 52px; display: flex; align-items: center; padding: 0 14px; color: #fff; font-weight: 600; font-size: 14px; gap: 8px; }
+  .sw-tint { padding: 8px 14px; font-size: 12px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+  .sw-meta { padding: 6px 14px 10px; font-family: var(--font-mono); font-size: 10px; color: var(--fg3); display: flex; justify-content: space-between; }
+
+  /* bottom row — in situ on ink */
+  .ink-strip { background: var(--amp-ink); border-radius: var(--r-4); padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .status-row { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 12px; color: #C4C6CC; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .badge { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: var(--r-full); letter-spacing: 0.06em; margin-left: auto; }
+  .strip-label { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: #6B7280; font-weight: 600; margin-bottom: 2px; }
+
+  svg { vertical-align: middle; }
+</style></head>
+<body>
+<div class="frame">
+  <!-- Swatches -->
+  <div class="swatches">
+    <div class="sw">
+      <div class="sw-fill" style="background: var(--success);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Success
+      </div>
+      <div class="sw-tint" style="background: var(--success-subtle); color: var(--success);">Shipped to prod <span>✓</span></div>
+      <div class="sw-meta"><span>success</span><span>#0F8D4E</span></div>
+    </div>
+    <div class="sw">
+      <div class="sw-fill" style="background: var(--warning);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Warning
+      </div>
+      <div class="sw-tint" style="background: var(--warning-subtle); color: var(--warning);">Latency spike <span>→</span></div>
+      <div class="sw-meta"><span>warning</span><span>#C77700</span></div>
+    </div>
+    <div class="sw">
+      <div class="sw-fill" style="background: var(--danger);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Danger
+      </div>
+      <div class="sw-tint" style="background: var(--danger-subtle); color: var(--danger);">Eval failure <span style="font-family:var(--font-mono)">P0</span></div>
+      <div class="sw-meta"><span>danger = brand red</span><span>#D41E10</span></div>
+    </div>
+    <div class="sw">
+      <div class="sw-fill" style="background: var(--info);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        Info
+      </div>
+      <div class="sw-tint" style="background: var(--info-subtle); color: var(--info);">Deploy queued</div>
+      <div class="sw-meta"><span>info</span><span>#1D6FE0</span></div>
+    </div>
+  </div>
+
+  <!-- In-context on ink -->
+  <div class="ink-strip">
+    <div class="strip-label">In context · prototype-review · session 01</div>
+    <div class="status-row">
+      <span class="dot" style="background: var(--success);"></span>
+      eval harness · 312 cases passed
+      <span class="badge" style="background: rgba(15,141,78,0.18); color: #4ADE80;">PASSED</span>
+    </div>
+    <div class="status-row">
+      <span class="dot" style="background: var(--warning);"></span>
+      p95 latency · 3.2s — above 2s budget
+      <span class="badge" style="background: rgba(199,119,0,0.2); color: #F59E0B;">WARN</span>
+    </div>
+    <div class="status-row">
+      <span class="dot" style="background: var(--danger);"></span>
+      retry loop · no backoff · unbounded
+      <span class="badge" style="background: rgba(212,30,16,0.2); color: #F87171;">P0</span>
+    </div>
+    <div class="status-row">
+      <span class="dot" style="background: var(--info);"></span>
+      canary deploy · 5% traffic · monitoring
+      <span class="badge" style="background: rgba(29,111,224,0.18); color: #60A5FA;">INFO</span>
+    </div>
+  </div>
+</div>
+</body></html>

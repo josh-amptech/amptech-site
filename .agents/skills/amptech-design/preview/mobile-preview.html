@@ -1,0 +1,211 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Components — Mobile Preview" viewport="500x900" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AmpTech — Mobile Preview</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--gray-50); font-family: var(--font-body); }
+  .stage { display: flex; gap: 32px; padding: 28px 24px; align-items: flex-start; flex-wrap: wrap; }
+  .phone-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .phone-label { font-family: var(--font-mono); font-size: 10px; color: var(--fg3); letter-spacing: .08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="./ios-frame.jsx"></script>
+<script type="text/babel">
+const { useState } = React;
+
+/* ---- Inline icon helper ---- */
+function Ico({ name, size = 20 }) {
+  const p = {
+    arrowRight: <><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></>,
+    menu:  <><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></>,
+    x:     <><path d="M18 6 6 18"/><path d="m6 6 12 12"/></>,
+    check: <polyline points="20 6 9 17 4 12"/>,
+    alert: <><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></>,
+    bolt:  <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>,
+    activity: <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>,
+  };
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">{p[name]}</svg>;
+}
+
+function EyebrowTag({ children }) {
+  return (
+    <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", display: "inline-flex", alignItems: "center", gap: 6 }}>
+      <span style={{ width: 14, height: 2, background: "var(--accent)" }}/>
+      {children}
+    </span>
+  );
+}
+
+/* ===== SCREEN 1: Home / Hero ===== */
+function ScreenHero({ onNav }) {
+  return (
+    <div style={{ height: "100%", overflowY: "auto", background: "#fff", display: "flex", flexDirection: "column" }}>
+      {/* Nav */}
+      <div style={{ height: 52, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 16px", borderBottom: "1px solid var(--border)", background: "rgba(255,255,255,0.92)", position: "sticky", top: 0, zIndex: 10 }}>
+        <img src="../assets/svg/logo-horizontal.svg" alt="AmpTech" style={{ height: 20 }}/>
+        <button onClick={() => onNav("menu")} style={{ background: "none", border: "none", cursor: "pointer", padding: 4, color: "var(--fg1)", minWidth: 44, minHeight: 44, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <Ico name="menu" size={20}/>
+        </button>
+      </div>
+      {/* Hero */}
+      <div style={{ padding: "32px 20px 24px", flex: 1 }}>
+        <EyebrowTag>AI production</EyebrowTag>
+        <h1 style={{ fontFamily: "var(--font-display)", fontSize: 28, lineHeight: 1.1, letterSpacing: "-0.02em", fontWeight: 600, margin: "14px 0 12px", color: "var(--fg1)" }}>
+          Your prototype works.<br/>
+          <span style={{ color: "var(--amp-red)" }}>Now ship it.</span>
+        </h1>
+        <p style={{ fontSize: 15, lineHeight: 1.6, color: "var(--fg2)", margin: "0 0 24px" }}>
+          Senior engineers who take AI projects from demo to production-ready.
+        </p>
+        <button onClick={() => onNav("review")} style={{ width: "100%", background: "var(--amp-red)", color: "#fff", border: "none", borderRadius: "var(--r-3)", padding: "14px 20px", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 15, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 8, minHeight: 52 }}>
+          Book a prototype review <Ico name="arrowRight" size={16}/>
+        </button>
+        <button style={{ width: "100%", background: "transparent", color: "var(--fg1)", border: "1px solid var(--border-strong)", borderRadius: "var(--r-3)", padding: "13px 20px", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 15, cursor: "pointer", marginTop: 10, minHeight: 52 }}>
+          See how we work
+        </button>
+
+        {/* Metrics row */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 28 }}>
+          {[
+            { n: "21d",     l: "Median ship-to-prod" },
+            { n: "99.95%",  l: "Rolling reliability" },
+          ].map(m => (
+            <div key={m.l} style={{ borderLeft: "3px solid var(--amp-red)", paddingLeft: 10 }}>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 22, fontWeight: 600, color: "var(--fg1)", letterSpacing: "-0.02em", fontVariantNumeric: "tabular-nums" }}>{m.n}</div>
+              <div style={{ fontSize: 11, color: "var(--fg3)", marginTop: 2, textTransform: "uppercase", letterSpacing: ".1em", fontWeight: 600 }}>{m.l}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Service cards */}
+        <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 10 }}>
+          <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: ".12em", color: "var(--fg3)", fontWeight: 600, marginBottom: 2 }}>Services</div>
+          {[
+            { n: "01", t: "Prototype review",     d: "1 week · fixed fee" },
+            { n: "02", t: "Production sprint",    d: "4–6 weeks" },
+            { n: "03", t: "Embedded engineering", d: "Ongoing · retainer" },
+          ].map(s => (
+            <button key={s.n} onClick={() => onNav("services")} style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "var(--r-4)", padding: "14px 16px", fontFamily: "var(--font-body)", cursor: "pointer", display: "flex", alignItems: "center", gap: 12, textAlign: "left", minHeight: 60 }}>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--amp-red)", fontWeight: 700, flexShrink: 0 }}>{s.n}</span>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: 14, fontWeight: 600, color: "var(--fg1)" }}>{s.t}</div>
+                <div style={{ fontSize: 12, color: "var(--fg3)", fontFamily: "var(--font-mono)", marginTop: 2 }}>{s.d}</div>
+              </div>
+              <span style={{ color: "var(--fg3)", flexShrink: 0 }}><Ico name="arrowRight" size={16}/></span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ===== SCREEN 2: Mobile Menu Drawer ===== */
+function ScreenMenu({ onNav }) {
+  const links = ["How we work", "Services", "Case studies", "Playbook"];
+  return (
+    <div style={{ height: "100%", background: "#fff", display: "flex", flexDirection: "column" }}>
+      <div style={{ height: 52, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 16px", borderBottom: "1px solid var(--border)" }}>
+        <img src="../assets/svg/logo-horizontal.svg" alt="AmpTech" style={{ height: 20 }}/>
+        <button onClick={() => onNav("home")} style={{ background: "none", border: "none", cursor: "pointer", padding: 4, color: "var(--fg1)", minWidth: 44, minHeight: 44, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <Ico name="x" size={20}/>
+        </button>
+      </div>
+      <div style={{ flex: 1, overflowY: "auto" }}>
+        {links.map(l => (
+          <button key={l} onClick={() => onNav("home")} style={{ width: "100%", background: "none", border: "none", borderBottom: "1px solid var(--border)", padding: "18px 20px", fontFamily: "var(--font-body)", fontSize: 16, fontWeight: 500, color: "var(--fg1)", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", minHeight: 56, textAlign: "left" }}>
+            {l} <Ico name="arrowRight" size={16}/>
+          </button>
+        ))}
+      </div>
+      <div style={{ padding: 16, borderTop: "1px solid var(--border)" }}>
+        <button onClick={() => onNav("review")} style={{ width: "100%", background: "var(--amp-red)", color: "#fff", border: "none", borderRadius: "var(--r-3)", padding: "15px 20px", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 15, cursor: "pointer", minHeight: 52 }}>
+          Book a prototype review →
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ===== SCREEN 3: Book a review form ===== */
+function ScreenReview({ onNav }) {
+  return (
+    <div style={{ height: "100%", overflowY: "auto", background: "#fff", display: "flex", flexDirection: "column" }}>
+      <div style={{ height: 52, display: "flex", alignItems: "center", gap: 12, padding: "0 16px", borderBottom: "1px solid var(--border)" }}>
+        <button onClick={() => onNav("home")} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--amp-red)", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 14, padding: 0, display: "flex", alignItems: "center", gap: 4, minHeight: 44 }}>
+          ← Back
+        </button>
+        <span style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 15 }}>Prototype review</span>
+      </div>
+      <div style={{ padding: "24px 20px", display: "flex", flexDirection: "column", gap: 18, flex: 1 }}>
+        <div>
+          <EyebrowTag>1 week · fixed fee</EyebrowTag>
+          <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 600, margin: "10px 0 6px", letterSpacing: "-0.015em" }}>Book a prototype review</h2>
+          <p style={{ fontSize: 13, color: "var(--fg2)", margin: 0, lineHeight: 1.55 }}>A senior engineer reads your code, prompts, and infra. Five things that will break first.</p>
+        </div>
+        {[
+          { l: "Your name",    p: "e.g. Alex Chen" },
+          { l: "Email",        p: "you@startup.com" },
+          { l: "Project name", p: "e.g. customer-support copilot" },
+        ].map(f => (
+          <div key={f.l} style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <label style={{ fontSize: 12, fontWeight: 600, color: "var(--fg2)" }}>{f.l}</label>
+            <input placeholder={f.p} style={{ fontFamily: "var(--font-body)", fontSize: 15, padding: "12px 14px", border: "1px solid var(--border-strong)", borderRadius: "var(--r-3)", background: "#fff", color: "var(--fg1)", outline: "none", minHeight: 48 }}/>
+          </div>
+        ))}
+        <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+          <label style={{ fontSize: 12, fontWeight: 600, color: "var(--fg2)" }}>Stage</label>
+          <select style={{ fontFamily: "var(--font-body)", fontSize: 15, padding: "12px 14px", border: "1px solid var(--border-strong)", borderRadius: "var(--r-3)", background: "#fff", color: "var(--fg1)", minHeight: 48 }}>
+            <option>Working prototype</option>
+            <option>Early production</option>
+            <option>Scale pains</option>
+          </select>
+        </div>
+      </div>
+      <div style={{ padding: "0 20px 20px" }}>
+        <button style={{ width: "100%", background: "var(--amp-red)", color: "#fff", border: "none", borderRadius: "var(--r-3)", padding: "15px 20px", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 15, cursor: "pointer", minHeight: 52 }}>
+          Submit request →
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ===== Root app ===== */
+function MobileApp() {
+  const [screen, setScreen] = useState("home");
+  const screens = {
+    home:     <ScreenHero    onNav={setScreen}/>,
+    menu:     <ScreenMenu    onNav={setScreen}/>,
+    review:   <ScreenReview  onNav={setScreen}/>,
+    services: <ScreenHero    onNav={setScreen}/>,
+  };
+  return screens[screen] || screens.home;
+}
+
+function App() {
+  return (
+    <div className="stage">
+      <div className="phone-wrap">
+        <IosFrame statusBarStyle="dark-content">
+          <MobileApp/>
+        </IosFrame>
+        <div className="phone-label">AmpTech Mobile · 390px</div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>

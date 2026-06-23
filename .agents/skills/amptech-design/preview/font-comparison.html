@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AmpTech — Font Comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Epilogue:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<!-- Space Grotesk loaded from local brand font via colors_and_type.css -->
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--gray-50); font-family: var(--font-body); }
+
+  .page { padding: 32px; max-width: 1400px; margin: 0 auto; }
+
+  .header { margin-bottom: 28px; }
+  .header h1 { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin: 0 0 6px; color: var(--fg1); }
+  .header p { font-size: 14px; color: var(--fg2); margin: 0; }
+
+  /* Tab switcher */
+  .tabs { display: flex; gap: 4px; margin-bottom: 24px; background: var(--gray-100); padding: 4px; border-radius: var(--r-3); width: fit-content; }
+  .tab { font-size: 13px; font-weight: 500; padding: 7px 16px; border-radius: calc(var(--r-3) - 2px); border: none; cursor: pointer; background: transparent; color: var(--fg2); transition: all 120ms; font-family: var(--font-body); }
+  .tab.active { background: #fff; color: var(--fg1); box-shadow: var(--shadow-1); }
+
+  /* Column grid */
+  .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .col { background: #fff; border: 1px solid var(--border); border-radius: var(--r-4); overflow: hidden; }
+  .col-head { padding: 14px 16px; border-bottom: 1px solid var(--border); background: var(--gray-50); display: flex; flex-direction: column; gap: 4px; }
+  .col-name { font-size: 13px; font-weight: 700; color: var(--fg1); font-family: var(--font-body); }
+  .col-meta { font-size: 11px; color: var(--fg3); font-family: var(--font-mono); }
+  .col-body { padding: 18px 16px; display: flex; flex-direction: column; gap: 18px; }
+
+  .spec { display: flex; flex-direction: column; gap: 5px; padding-bottom: 14px; border-bottom: 1px dashed var(--border); }
+  .spec:last-child { border-bottom: none; padding-bottom: 0; }
+  .spec-label { font-size: 9px; text-transform: uppercase; letter-spacing: .12em; color: var(--fg3); font-weight: 600; font-family: var(--font-body); }
+
+  /* Current font marker */
+  .current-badge { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: var(--r-full); background: var(--accent-subtle); color: var(--accent); font-family: var(--font-body); width: fit-content; }
+
+  /* Font-specific classes */
+  .f-dm         { font-family: 'DM Sans', sans-serif; }
+  .f-dm-mono    { font-family: 'DM Mono', monospace; }
+  .f-inst       { font-family: 'Instrument Sans', sans-serif; }
+  .f-epilogue   { font-family: 'Epilogue', sans-serif; }
+  .f-jakarta    { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .f-space      { font-family: 'Space Grotesk', sans-serif; }
+
+  /* Eyebrow */
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); display: inline-flex; align-items: center; gap: 7px; }
+  .eyebrow::before { content: ""; width: 16px; height: 2px; background: var(--amp-red); flex-shrink: 0; }
+
+  /* Full card preview */
+  .card-preview { background: #fff; border: 1px solid var(--border); border-radius: var(--r-4); padding: 18px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow-1); }
+  .card-preview p { margin: 0; font-size: 13px; line-height: 1.55; color: var(--fg2); }
+  .card-meta { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; display: flex; justify-content: space-between; }
+
+  /* Nav preview */
+  .nav-preview { height: 48px; border: 1px solid var(--border); border-radius: var(--r-3); display: flex; align-items: center; justify-content: space-between; padding: 0 14px; gap: 16px; overflow: hidden; }
+  .nav-links { display: flex; gap: 14px; font-size: 12px; color: var(--fg2); font-weight: 500; overflow: hidden; }
+  .nav-cta { background: var(--amp-red); color: #fff; padding: 6px 10px; border-radius: var(--r-2); font-size: 11px; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+
+  /* Button preview */
+  .btn-preview { display: flex; gap: 8px; flex-wrap: wrap; }
+  .bp { padding: 8px 14px; border-radius: var(--r-3); font-size: 13px; font-weight: 600; border: none; cursor: default; }
+  .bp-primary { background: var(--amp-red); color: #fff; }
+  .bp-ghost { background: transparent; color: var(--fg1); border: 1px solid var(--border-strong); }
+
+  /* Metric */
+  .metric { font-size: 40px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; font-variant-numeric: tabular-nums; color: var(--fg1); }
+  .metric span { color: var(--amp-red); }
+  .metric-label { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: var(--fg3); font-weight: 600; font-family: var(--font-body); }
+
+  /* Sticky tabs */
+  .sticky-top { position: sticky; top: 0; background: var(--gray-50); padding: 12px 0 8px; z-index: 10; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <h1>Font comparison — AmpTech</h1>
+    <p>Same content, four candidate type systems. Space Grotesk (current) shown for reference.</p>
+  </div>
+
+  <div class="sticky-top">
+    <div class="tabs">
+      <button class="tab active" onclick="setView('all')">All 4</button>
+      <button class="tab" onclick="setView('dm')">DM Sans</button>
+      <button class="tab" onclick="setView('instrument')">Instrument Sans</button>
+      <button class="tab" onclick="setView('epilogue')">Epilogue</button>
+      <button class="tab" onclick="setView('current')">Current (Space Grotesk)</button>
+    </div>
+  </div>
+
+  <div class="cols" id="cols">
+
+    <!-- DM Sans -->
+    <div class="col" data-font="dm">
+      <div class="col-head">
+        <div class="col-name">DM Sans + DM Mono</div>
+        <div class="col-meta">Google Fonts · free · matched family</div>
+        <div class="current-badge">Recommended</div>
+      </div>
+      <div class="col-body">
+        <div class="spec">
+          <div class="spec-label">Eyebrow</div>
+          <div class="eyebrow f-dm">How we work</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Display headline</div>
+          <div class="f-dm" style="font-size:28px; font-weight:600; line-height:1.08; letter-spacing:-0.022em; color:var(--fg1); text-wrap:balance;">Your prototype works on your laptop.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Accent headline</div>
+          <div class="f-dm" style="font-size:28px; font-weight:600; line-height:1.08; letter-spacing:-0.022em; color:var(--amp-red); text-wrap:balance;">Now it needs to survive production.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Body copy</div>
+          <div class="f-dm" style="font-size:13px; line-height:1.6; color:var(--fg2);">We pair senior engineers with founders shipping AI-built products. Reliability, observability, and the judgment calls the demo didn't ask you to make.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Metric (DM Mono)</div>
+          <div class="metric-label">Median ship-to-prod</div>
+          <div class="metric f-dm-mono">21<span>d</span></div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Navigation</div>
+          <div class="nav-preview">
+            <div class="nav-links f-dm"><span style="color:var(--fg1); font-weight:600;">How we work</span><span>Services</span><span>Cases</span></div>
+            <div class="nav-cta f-dm">Book a review →</div>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Buttons</div>
+          <div class="btn-preview">
+            <div class="bp bp-primary f-dm">Book a review</div>
+            <div class="bp bp-ghost f-dm">Playbook</div>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Service card</div>
+          <div class="card-preview">
+            <div class="card-meta f-dm" style="color:var(--amp-red); font-weight:700;"><span>01</span><span style="color:var(--fg3); font-weight:600; font-family:'DM Mono',monospace;">1 WEEK</span></div>
+            <div class="f-dm" style="font-size:16px; font-weight:600; color:var(--fg1);">Prototype review</div>
+            <p class="f-dm">A senior engineer reads your code, prompts, and infra. Five things that will break first.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instrument Sans -->
+    <div class="col" data-font="instrument">
+      <div class="col-head">
+        <div class="col-name">Instrument Sans</div>
+        <div class="col-meta">Google Fonts · free · humanist grotesk</div>
+      </div>
+      <div class="col-body">
+        <div class="spec">
+          <div class="spec-label">Eyebrow</div>
+          <div class="eyebrow f-inst">How we work</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Display headline</div>
+          <div class="f-inst" style="font-size:28px; font-weight:600; line-height:1.08; letter-spacing:-0.02em; color:var(--fg1); text-wrap:balance;">Your prototype works on your laptop.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Accent headline</div>
+          <div class="f-inst" style="font-size:28px; font-weight:600; line-height:1.08; letter-spacing:-0.02em; color:var(--amp-red); text-wrap:balance;">Now it needs to survive production.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Body copy</div>
+          <div class="f-inst" style="font-size:13px; line-height:1.6; color:var(--fg2);">We pair senior engineers with founders shipping AI-built products. Reliability, observability, and the judgment calls the demo didn't ask you to make.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Metric (DM Mono)</div>
+          <div class="metric-label">Median ship-to-prod</div>
+          <div class="metric f-dm-mono">21<span>d</span></div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Navigation</div>
+          <div class="nav-preview">
+            <div class="nav-links f-inst"><span style="color:var(--fg1); font-weight:600;">How we work</span><span>Services</span><span>Cases</span></div>
+            <div class="nav-cta f-inst">Book a review →</div>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Buttons</div>
+          <div class="btn-preview">
+            <div class="bp bp-primary f-inst">Book a review</div>
+            <div class="bp bp-ghost f-inst">Playbook</div>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Service card</div>
+          <div class="card-preview">
+            <div class="card-meta f-inst" style="color:var(--amp-red); font-weight:700;"><span>01</span><span style="color:var(--fg3); font-weight:600; font-family:'DM Mono',monospace;">1 WEEK</span></div>
+            <div class="f-inst" style="font-size:16px; font-weight:600; color:var(--fg1);">Prototype review</div>
+            <p class="f-inst">A senior engineer reads your code, prompts, and infra. Five things that will break first.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Epilogue -->
+    <div class="col" data-font="epilogue">
+      <div class="col-head">
+        <div class="col-name">Epilogue</div>
+        <div class="col-meta">Google Fonts · free · high x-height</div>
+      </div>
+      <div class="col-body">
+        <div class="spec">
+          <div class="spec-label">Eyebrow</div>
+          <div class="eyebrow f-epilogue">How we work</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Display headline</div>
+          <div class="f-epilogue" style="font-size:28px; font-weight:600; line-height:1.08; letter-spacing:-0.02em; color:var(--fg1); text-wrap:balance;">Your prototype works on your laptop.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Accent headline</div>
+          <div class="f-epilogue" style="font-size:28px; font-weight:600; line-height:1.08; letter-spacing:-0.02em; color:var(--amp-red); text-wrap:balance;">Now it needs to survive production.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Body copy</div>
+          <div class="f-epilogue" style="font-size:13px; line-height:1.6; color:var(--fg2);">We pair senior engineers with founders shipping AI-built products. Reliability, observability, and the judgment calls the demo didn't ask you to make.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Metric (DM Mono)</div>
+          <div class="metric-label">Median ship-to-prod</div>
+          <div class="metric f-dm-mono">21<span>d</span></div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Navigation</div>
+          <div class="nav-preview">
+            <div class="nav-links f-epilogue"><span style="color:var(--fg1); font-weight:600;">How we work</span><span>Services</span><span>Cases</span></div>
+            <div class="nav-cta f-epilogue">Book a review →</div>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Buttons</div>
+          <div class="btn-preview">
+            <div class="bp bp-primary f-epilogue">Book a review</div>
+            <div class="bp bp-ghost f-epilogue">Playbook</div>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Service card</div>
+          <div class="card-preview">
+            <div class="card-meta f-epilogue" style="color:var(--amp-red); font-weight:700;"><span>01</span><span style="color:var(--fg3); font-weight:600; font-family:'DM Mono',monospace;">1 WEEK</span></div>
+            <div class="f-epilogue" style="font-size:16px; font-weight:600; color:var(--fg1);">Prototype review</div>
+            <p class="f-epilogue">A senior engineer reads your code, prompts, and infra. Five things that will break first.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Current: Space Grotesk -->
+    <div class="col" data-font="current">
+      <div class="col-head">
+        <div class="col-name">Space Grotesk (current)</div>
+        <div class="col-meta">Google Fonts · free · reference</div>
+      </div>
+      <div class="col-body">
+        <div class="spec">
+          <div class="spec-label">Eyebrow</div>
+          <div class="eyebrow f-space">How we work</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Display headline</div>
+          <div class="f-space" style="font-size:28px; font-weight:600; line-height:1.08; letter-spacing:-0.022em; color:var(--fg1); text-wrap:balance;">Your prototype works on your laptop.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Accent headline</div>
+          <div class="f-space" style="font-size:28px; font-weight:600; line-height:1.08; letter-spacing:-0.022em; color:var(--amp-red); text-wrap:balance;">Now it needs to survive production.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Body copy</div>
+          <div class="f-space" style="font-size:13px; line-height:1.6; color:var(--fg2);">We pair senior engineers with founders shipping AI-built products. Reliability, observability, and the judgment calls the demo didn't ask you to make.</div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Metric (JetBrains Mono)</div>
+          <div class="metric-label">Median ship-to-prod</div>
+          <div class="metric" style="font-family:'JetBrains Mono',monospace;">21<span>d</span></div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Navigation</div>
+          <div class="nav-preview">
+            <div class="nav-links f-space"><span style="color:var(--fg1); font-weight:600;">How we work</span><span>Services</span><span>Cases</span></div>
+            <div class="nav-cta f-space">Book a review →</div>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Buttons</div>
+          <div class="btn-preview">
+            <div class="bp bp-primary f-space">Book a review</div>
+            <div class="bp bp-ghost f-space">Playbook</div>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Service card</div>
+          <div class="card-preview">
+            <div class="card-meta f-space" style="color:var(--amp-red); font-weight:700;"><span>01</span><span style="color:var(--fg3); font-weight:600; font-family:'JetBrains Mono',monospace;">1 WEEK</span></div>
+            <div class="f-space" style="font-size:16px; font-weight:600; color:var(--fg1);">Prototype review</div>
+            <p class="f-space">A senior engineer reads your code, prompts, and infra. Five things that will break first.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /cols -->
+
+</div>
+
+<script>
+function setView(font) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  const cols = document.querySelectorAll('.col');
+  if (font === 'all') {
+    document.getElementById('cols').style.gridTemplateColumns = 'repeat(4, 1fr)';
+    cols.forEach(c => c.style.display = '');
+  } else {
+    document.getElementById('cols').style.gridTemplateColumns = '1fr 1fr';
+    cols.forEach(c => {
+      const match = c.dataset.font === font || c.dataset.font === 'current';
+      c.style.display = match ? '' : 'none';
+    });
+  }
+}
+</script>
+</body>
+</html>

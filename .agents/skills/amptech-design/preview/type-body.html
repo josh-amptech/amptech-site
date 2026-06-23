@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Type — Body & Utility" subtitle="Lead, body, small, eyebrow, metric, code" viewport="700x280" -->
+<html><head><meta charset="utf-8"><title>Body & Utility Type</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  .frame { padding: 22px 26px; font-family: var(--font-body); }
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+  .spec { display:flex; flex-direction:column; gap: 6px; border-bottom: 1px dashed var(--border); padding-bottom: 10px; }
+  .meta { font-family: var(--font-mono); font-size: 10px; color: var(--fg3); }
+</style></head>
+<body>
+<div class="frame">
+  <div class="grid">
+    <div class="spec">
+      <div class="amp-lead">A senior engineer reads your code and your prompts.</div>
+      <div class="meta">Lead · 18/1.55 · Inter 400</div>
+    </div>
+    <div class="spec">
+      <div class="amp-p">Reliability, observability, and the judgment calls the demo didn't ask you to make.</div>
+      <div class="meta">Body · 16/1.6 · Inter 400</div>
+    </div>
+    <div class="spec">
+      <div class="amp-small">One week. Written report. Five things that will break first.</div>
+      <div class="meta">Small · 14/1.5 · Inter 400</div>
+    </div>
+    <div class="spec">
+      <div><span class="amp-eyebrow">How we work</span></div>
+      <div class="meta">Eyebrow · 12 · +0.14em · UPPERCASE</div>
+    </div>
+    <div class="spec">
+      <div class="amp-metric" style="font-size:24px; color:var(--accent);">99.95<span style="opacity:.6">%</span></div>
+      <div class="meta">Metric · JetBrains Mono · tabular-nums</div>
+    </div>
+    <div class="spec">
+      <div><code>await evals.run("prod-traffic")</code></div>
+      <div class="meta">Code · 14/1.55 · JetBrains Mono 400</div>
+    </div>
+  </div>
+</div>
+</body></html>

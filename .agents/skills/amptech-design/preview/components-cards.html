@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Components — Cards" subtitle="Default, bolt-bar callout, inverted on ink" viewport="700x200" -->
+<html><head><meta charset="utf-8"><title>Cards</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--gray-50); }
+  .frame { padding: 22px 24px; font-family: var(--font-body); }
+  .grid { display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-4); padding: 18px; box-shadow: var(--shadow-1); display:flex; flex-direction:column; gap: 8px; }
+  .card h4 { margin: 0; font-size: 16px; font-weight: 600; }
+  .card p { margin: 0; font-size: 13px; color: var(--fg2); line-height: 1.5; }
+  .meta { font-family: var(--font-mono); font-size: 11px; color: var(--fg3); display:flex; justify-content:space-between; }
+  .callout { position:relative; padding-left: 16px; }
+  .callout::before { content:""; position:absolute; left:0; top:18px; bottom:18px; width:3px; background: var(--amp-red); }
+  .dark { background: var(--amp-ink); border-color: #2A2D33; color: #fff; box-shadow: var(--shadow-3); }
+  .dark p { color: #C4C6CC; }
+</style></head>
+<body>
+<div class="frame">
+  <div class="grid">
+    <div class="card"><div class="meta"><span>01</span><span>1 WEEK</span></div><h4>Prototype review</h4><p>A senior engineer reads your code, your prompts, your infra.</p></div>
+    <div class="card callout"><h4>The five things that will break first.</h4><p>Written report. Prioritized. With exactly what to do about each.</p></div>
+    <div class="card dark"><div class="meta" style="color:#9AA0A8;"><span>03</span><span>ONGOING</span></div><h4>Embedded engineering</h4><p>We sit in your repo. We ship. You keep moving.</p></div>
+  </div>
+</div>
+</body></html>

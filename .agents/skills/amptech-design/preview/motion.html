@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Spacing — Motion & States" subtitle="Duration, easing, interaction state rules" viewport="700x220" -->
+<html><head><meta charset="utf-8"><title>Motion & States</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  .frame { padding: 20px 24px; font-family: var(--font-body); display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .block { border: 1px solid var(--border); border-radius: var(--r-3); padding: 14px; }
+  .title { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: var(--fg3); font-weight: 600; margin-bottom: 8px; }
+  .tbl { display:grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-family: var(--font-mono); font-size: 11px; color: var(--fg2); }
+  .tbl b { color: var(--fg1); }
+</style></head>
+<body>
+<div class="frame">
+  <div class="block">
+    <div class="title">Duration</div>
+    <div class="tbl">
+      <b>--dur-fast</b><span>120ms — hover, press</span>
+      <b>--dur-base</b><span>200ms — default</span>
+      <b>--dur-slow</b><span>320ms — enter/exit</span>
+    </div>
+  </div>
+  <div class="block">
+    <div class="title">Easing</div>
+    <div class="tbl">
+      <b>ease-out</b><span>(0.2, 0.8, 0.2, 1) default</span>
+      <b>ease-in</b><span>(0.4, 0, 1, 1)</span>
+      <b>ease-snap</b><span>(0.2, 0.9, 0.1, 1.05) — precision pop</span>
+    </div>
+  </div>
+  <div class="block" style="grid-column: 1/-1;">
+    <div class="title">State rules</div>
+    <div class="tbl">
+      <b>Hover</b><span>shadow-1 → shadow-2 · translateY(-2px) · 120ms</span>
+      <b>Press</b><span>scale(0.98) · red-deep · 80ms</span>
+      <b>Focus</b><span>red-glow ring + border-strong</span>
+      <b>Disabled</b><span>opacity 0.4 · pointer-events none</span>
+    </div>
+  </div>
+</div>
+</body></html>
