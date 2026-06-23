@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/josh-amptech/amptech-site/compare/v1.4.0...v1.5.0) (2026-06-23)
+
+
+### Features
+
+* migrate site onto amptech-design tokens + fonts (Phase 1+2) ([#30](https://github.com/josh-amptech/amptech-site/issues/30)) ([29338bd](https://github.com/josh-amptech/amptech-site/commit/29338bd900b6cf812b29641248e22f4e132f6d97))
+
 # [1.4.0](https://github.com/josh-amptech/amptech-site/compare/v1.3.0...v1.4.0) (2026-06-23)
 
 
