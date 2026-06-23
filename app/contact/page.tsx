@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Check } from "lucide-react";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 
@@ -47,20 +48,13 @@ export default function ContactPage() {
     return (
       <SectionWrapper className="min-h-[60vh] flex items-center">
         <div className="max-w-lg mx-auto text-center">
-          <div className="w-12 h-12 rounded-full bg-amp-red/10 flex items-center justify-center mx-auto mb-6">
-            <svg
-              className="w-6 h-6 text-amp-red"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="w-12 h-12 rounded-lg bg-amp-red/10 flex items-center justify-center mx-auto mb-6">
+            <Check
+              size={24}
               strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
+              className="text-amp-red"
+              aria-hidden
+            />
           </div>
           <h2 className="text-3xl font-bold text-amp-ink mb-4">
             Request received.

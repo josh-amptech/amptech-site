@@ -30,7 +30,7 @@ export default function Plan() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red/80">
+        <p className="amp-eyebrow mb-4">
           The Plan
         </p>
         <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-white sm:text-[4.4rem] md:text-[5.4rem]">

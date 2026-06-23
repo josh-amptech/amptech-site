@@ -10,7 +10,12 @@ export const metadata = {
 const proofBlocks = [
   {
     title: "Experience",
-    body: "20+ years of professional software development across real products, real users, and real delivery pressure.",
+    body: (
+      <>
+        <span className="amp-metric">20+ years</span> of professional software
+        development across real products, real users, and real delivery pressure.
+      </>
+    ),
   },
   {
     title: "References",
@@ -22,7 +27,7 @@ export default function WorkPage() {
   return (
     <SectionWrapper>
       <div className="max-w-5xl">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
+        <p className="amp-eyebrow mb-4">
           How We Work
         </p>
         <h1 className="display-type max-w-4xl text-[3.5rem] leading-[0.92] text-amp-ink sm:text-[4.7rem] md:text-[5.8rem]">
@@ -43,7 +48,7 @@ export default function WorkPage() {
         <div className="mt-16 grid gap-5 border-t border-black/10 pt-8 md:grid-cols-2">
           {proofBlocks.map((block) => (
             <div key={block.title} className="section-rule pt-5">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amp-red">
+              <p className="amp-eyebrow mb-3">
                 {block.title}
               </p>
               <p className="text-base leading-relaxed text-[var(--fg2)]">
@@ -54,7 +59,7 @@ export default function WorkPage() {
         </div>
 
         <div className="mt-16 border-t border-black/10 pt-8">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
+          <p className="amp-eyebrow mb-4">
             What That Means For You
           </p>
           <div className="max-w-3xl space-y-4 text-base leading-relaxed text-[var(--fg2)]">

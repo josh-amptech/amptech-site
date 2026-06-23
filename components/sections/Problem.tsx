@@ -12,7 +12,7 @@ export default function Problem() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <p className="mb-8 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
+          <p className="amp-eyebrow mb-8">
             The Problem
           </p>
 
