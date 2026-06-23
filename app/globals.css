@@ -1,91 +1,218 @@
+/* =========================================================================
+   AmpTech — globals.css  (Tailwind v4)
+   -------------------------------------------------------------------------
+   This file MIRRORS the canonical tokens in the amptech-design skill
+   (.claude/skills/amptech-design/colors_and_type.css). It is the ONLY
+   place brand colors/fonts/radii live in this repo.
+
+   RULES:
+   • Do NOT add new brand colors here or anywhere else. If the brand needs a
+     new token, add it to the skill's colors_and_type.css first, then mirror.
+   • No cream/warm palette. No candy gradients. Backgrounds are flat
+     white / near-black per the system.
+   • Fonts come from next/font in app/layout.tsx (see MIGRATION.md) and are
+     bound to the CSS vars below.
+   ========================================================================= */
+
 @import "tailwindcss";
 
 @theme {
-  --color-brand-red: #D41E10;
-  --color-brand-red-light: #FAE5E4;
-  --color-brand-gray: #4D4D4D;
-  --color-brand-black: #000000;
-  --color-brand-white: #FFFFFF;
-  --color-brand-gray-bg: #F5F5F5;
-  --color-brand-ink: #111111;
-  --color-brand-cream: #F1ECE4;
-  --color-brand-steel: #90877C;
-  --color-brand-night: #0B0B0C;
-  --color-brand-night-soft: #18181B;
+  /* ---------- BRAND CORE ------------------------------------------------ */
+  --color-amp-red:        #D41E10;   /* official brand red — accent only */
+  --color-amp-red-hot:    #EE2415;   /* hover */
+  --color-amp-red-deep:   #A21508;   /* pressed */
+  --color-amp-red-ember:  #680E06;   /* deep tint, dark surfaces */
+  --color-amp-steel:      #4D4D4D;   /* official brand gray (COOL, not warm) */
+  --color-amp-ink:        #141414;   /* near-black */
+  --color-amp-charcoal:   #1A1C20;
+  --color-amp-graphite:   #2A2D33;
 
-  --font-sans: var(--font-montserrat), Arial, sans-serif;
-  --font-display: var(--font-bebas), Impact, sans-serif;
+  /* ---------- NEUTRALS (cool graphite — NO warm cream/steel) ----------- */
+  --color-gray-0:   #FFFFFF;
+  --color-gray-50:  #F7F7F8;
+  --color-gray-100: #EEEEF0;
+  --color-gray-200: #DEDFE3;
+  --color-gray-300: #C4C6CC;
+  --color-gray-400: #9AA0A8;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5057;
+  --color-gray-700: #2F333A;
+  --color-gray-800: #1A1C20;
+  --color-gray-900: #141414;
+
+  /* ---------- STATUS ---------------------------------------------------- */
+  --color-success: #0F8D4E;
+  --color-warning: #C77700;
+  --color-danger:  #D41E10;   /* intentionally brand red */
+  --color-info:    #1D6FE0;
+
+  /* ---------- FONTS (bound to next/font vars in layout.tsx) ------------- */
+  --font-display: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+  --font-sans:    var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-mono:    var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
+
+  /* ---------- RADII (angular: 2–14px; full-round only for avatars/pills) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;   /* buttons, inputs */
+  --radius-lg: 10px;  /* cards */
+  --radius-xl: 14px;  /* large cards / modals */
 }
 
-html {
-  scroll-behavior: smooth;
+/* =========================================================================
+   SEMANTIC TOKENS — light (default) + dark. Reference these in components
+   via var(); keep them in sync with the skill's colors_and_type.css.
+   ========================================================================= */
+:root {
+  --bg:        var(--color-gray-0);
+  --bg-subtle: var(--color-gray-50);
+  --bg-muted:  var(--color-gray-100);
+
+  --surface:        #FFFFFF;
+  --surface-raised: #FFFFFF;
+  --surface-sunken: var(--color-gray-50);
+
+  --fg1: var(--color-gray-900);  /* primary type */
+  --fg2: var(--color-gray-700);  /* secondary */
+  --fg3: var(--color-gray-500);  /* meta */
+  --fg-on-red: #FFFFFF;
+  --fg-on-ink: #FFFFFF;
+
+  --border:        var(--color-gray-200);
+  --border-strong: var(--color-gray-300);
+  --divider:       var(--color-gray-100);
+
+  --accent:         var(--color-amp-red);
+  --accent-hover:   var(--color-amp-red-hot);
+  --accent-pressed: var(--color-amp-red-deep);
+  --accent-subtle:  #FDECEA;
+
+  /* Shadows — precise, never cloudy */
+  --shadow-1: 0 1px 2px rgba(12,13,16,0.06), 0 0 0 1px rgba(12,13,16,0.04);
+  --shadow-2: 0 2px 6px rgba(12,13,16,0.08), 0 1px 2px rgba(12,13,16,0.04);
+  --shadow-3: 0 8px 24px rgba(12,13,16,0.10), 0 2px 6px rgba(12,13,16,0.06);
+  --shadow-red-glow: 0 0 0 3px rgba(212,30,16,0.18);   /* focus / "powered-on" */
+
+  /* Motion */
+  --ease-out:  cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-snap: cubic-bezier(0.2, 0.9, 0.1, 1.05);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+
+  /* Approved controlled surfaces — the ONLY allowed gradients */
+  --grad-ink: linear-gradient(180deg, #242424 0%, #141414 100%);
 }
+
+[data-theme="dark"], .theme-dark {
+  --bg:        var(--color-amp-ink);
+  --bg-subtle: var(--color-amp-charcoal);
+  --bg-muted:  var(--color-amp-graphite);
+
+  --surface:        var(--color-amp-charcoal);
+  --surface-raised: #23262C;
+  --surface-sunken: var(--color-amp-ink);
+
+  --fg1: #F4F5F7;
+  --fg2: #C4C6CC;
+  --fg3: #9AA0A8;
+
+  --border:        #2A2D33;
+  --border-strong: #3A3E45;
+  --divider:       #23262C;
+
+  --accent:         var(--color-amp-red-hot);
+  --accent-hover:   #FF4450;
+  --accent-pressed: var(--color-amp-red);
+}
+
+/* =========================================================================
+   BASE — flat surfaces. No cream gradient body, no fixed gradient overlay.
+   ========================================================================= */
+html { scroll-behavior: smooth; }
 
 body {
-  background:
-    linear-gradient(180deg, #f7f2ea 0%, #f7f3ee 42%, #ffffff 100%);
-  color: #4D4D4D;
+  background: var(--bg);              /* flat — was a warm cream gradient */
+  color: var(--fg2);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-a {
-  text-underline-offset: 0.2em;
-}
+a { color: var(--accent); text-underline-offset: 0.2em; }
+a:hover { color: var(--accent-hover); }
 
+::selection { background: var(--color-amp-red); color: #fff; }
+
+/* Headlines use the display font in SENTENCE CASE — never forced uppercase. */
 .display-type {
-  font-family: var(--font-display), Impact, sans-serif;
-  letter-spacing: 0.03em;
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;          /* engineered, tight — not Bebas's +0.03em */
+  font-weight: 600;
+  text-wrap: balance;
 }
 
-.site-shell {
-  position: relative;
-}
+/* ---------- SIGNATURE MICRO-ELEMENTS (were missing entirely) ----------- */
 
-.site-shell::before {
+/* Eyebrow: 12px tracked uppercase RED label + 18px red bar. */
+.amp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.amp-eyebrow::before {
   content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    linear-gradient(120deg, rgba(212, 30, 16, 0.055), transparent 28%),
-    linear-gradient(180deg, rgba(11, 11, 12, 0.04), transparent 34%);
-  opacity: 0.75;
+  width: 18px;
+  height: 2px;
+  background: var(--accent);
 }
 
-.hero-noise {
+/* Bolt-bar: 3px red left accent — pull-quotes / key callouts / active nav only. */
+.amp-bolt-bar {
   position: relative;
-  overflow: clip;
-  background:
-    linear-gradient(135deg, rgba(11, 11, 12, 0.99) 0%, rgba(19, 19, 21, 0.98) 62%, rgba(96, 16, 12, 0.96) 100%);
+  padding-left: 14px;
+}
+.amp-bolt-bar::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.25em; bottom: 0.25em;
+  width: 3px;
+  background: var(--accent);
 }
 
-.hero-noise::before {
+/* Mono metrics: every number (uptime, latency, counts) renders engineered. */
+.amp-metric {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Dark hero surface — flat ink (approved --grad-ink), no diagonal red wash. */
+.hero-ink {
+  background: var(--grad-ink);
+  color: var(--fg-on-ink);
+}
+
+/* Optional blueprint grid texture at low opacity — engineering signal. */
+.hero-ink::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
   background-size: 84px 84px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95), transparent 92%);
-  opacity: 0.18;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), transparent 92%);
+  opacity: 0.15;
+  pointer-events: none;
 }
 
-.hero-noise::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 1px;
-  background: rgba(241, 236, 228, 0.28);
-}
-
-.section-rule {
-  border-top: 1px solid rgba(17, 17, 17, 0.12);
-}
-
-@media (max-width: 768px) {
-  body {
-    background:
-      linear-gradient(180deg, #f7f2ea 0%, #ffffff 72%);
-  }
-}
+.section-rule { border-top: 1px solid var(--border); }
