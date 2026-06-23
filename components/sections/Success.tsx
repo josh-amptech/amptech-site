@@ -30,7 +30,7 @@ function CheckIcon() {
       viewBox="0 0 16 16"
       fill="none"
       aria-hidden="true"
-      className="flex-shrink-0 text-brand-red"
+      className="flex-shrink-0 text-amp-red"
     >
       <path
         d="M2.5 8.5l3.5 3.5 7.5-8"
@@ -52,10 +52,10 @@ export default function Success() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
           Success
         </p>
-        <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-brand-ink sm:text-[4.3rem] md:text-[5.2rem]">
+        <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-amp-ink sm:text-[4.3rem] md:text-[5.2rem]">
           WHAT CHANGES
           <br />
           WHEN THE
@@ -75,14 +75,14 @@ export default function Success() {
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
               className="flex items-start gap-4"
             >
-              <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-red-light">
+              <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-amp-red/10">
                 <CheckIcon />
               </div>
               <div>
-                <h3 className="mb-1 text-lg font-bold leading-snug text-brand-black">
+                <h3 className="mb-1 text-lg font-bold leading-snug text-amp-ink">
                   {item.headline}
                 </h3>
-                <p className="text-base leading-relaxed text-brand-gray">
+                <p className="text-base leading-relaxed text-[var(--fg2)]">
                   {item.body}
                 </p>
               </div>

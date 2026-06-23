@@ -22,10 +22,10 @@ export default function WorkPage() {
   return (
     <SectionWrapper>
       <div className="max-w-5xl">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
           How We Work
         </p>
-        <h1 className="display-type max-w-4xl text-[3.5rem] leading-[0.92] text-brand-ink sm:text-[4.7rem] md:text-[5.8rem]">
+        <h1 className="display-type max-w-4xl text-[3.5rem] leading-[0.92] text-amp-ink sm:text-[4.7rem] md:text-[5.8rem]">
           HOW TO
           <br />
           TELL IF
@@ -34,7 +34,7 @@ export default function WorkPage() {
           <br />
           CAN WORK.
         </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-brand-gray">
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--fg2)]">
           If you are deciding whether AmpTech is the right fit, start here. The
           right partner should make the project clearer before they ask you to
           commit to the build.
@@ -43,10 +43,10 @@ export default function WorkPage() {
         <div className="mt-16 grid gap-5 border-t border-black/10 pt-8 md:grid-cols-2">
           {proofBlocks.map((block) => (
             <div key={block.title} className="section-rule pt-5">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-red">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amp-red">
                 {block.title}
               </p>
-              <p className="text-base leading-relaxed text-brand-gray">
+              <p className="text-base leading-relaxed text-[var(--fg2)]">
                 {block.body}
               </p>
             </div>
@@ -54,10 +54,10 @@ export default function WorkPage() {
         </div>
 
         <div className="mt-16 border-t border-black/10 pt-8">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-red">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
             What That Means For You
           </p>
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-brand-gray">
+          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-[var(--fg2)]">
             <p>
               You should know what can be kept, what needs rebuilding, what the
               tradeoffs are, and who is making the technical decisions before

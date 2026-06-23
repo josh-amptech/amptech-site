@@ -11,7 +11,7 @@ const capabilityMarks = [
 
 export default function Hero() {
   return (
-    <section className="hero-noise min-h-[calc(100svh-4rem)] text-white">
+    <section className="hero-ink relative overflow-clip min-h-[calc(100svh-4rem)] text-white">
       <div className="mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl px-4 sm:px-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(19rem,0.8fr)] lg:px-8">
         <motion.div
           initial={false}
@@ -23,7 +23,7 @@ export default function Hero() {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.05, ease: "easeOut" }}
-            className="mb-6 text-sm font-semibold uppercase tracking-[0.28em] text-brand-cream/70"
+            className="mb-6 text-sm font-semibold uppercase tracking-[0.28em] text-white/70"
           >
             AmpTech
           </motion.p>
@@ -32,14 +32,14 @@ export default function Hero() {
             initial={false}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.55, ease: "easeOut", delay: 0.1 }}
-            className="mb-8 h-px w-24 origin-left bg-brand-cream/40"
+            className="mb-8 h-px w-24 origin-left bg-white/40"
           />
 
           <motion.h1
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.12, ease: "easeOut" }}
-            className="display-type max-w-4xl text-[3.35rem] leading-[0.9] text-brand-cream sm:text-[6rem] md:text-[7.8rem] lg:text-[8.8rem]"
+            className="display-type max-w-4xl text-[3.35rem] leading-[0.9] text-white sm:text-[6rem] md:text-[7.8rem] lg:text-[8.8rem]"
           >
             YOU HAVE
             <br />
@@ -47,14 +47,14 @@ export default function Hero() {
             <br />
             NOW BUILD
             <br />
-            <span className="text-brand-red-light">THE PRODUCT.</span>
+            <span className="text-amp-red">THE PRODUCT.</span>
           </motion.h1>
 
           <motion.p
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.22, ease: "easeOut" }}
-            className="mt-6 max-w-2xl text-base leading-relaxed text-brand-cream/82 sm:text-lg"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-white/82 sm:text-lg"
           >
             AmpTech helps founders and business owners turn promising AI builds,
             rough prototypes, and half-finished app ideas into software people
@@ -79,7 +79,7 @@ export default function Hero() {
             <Button
               href="/work"
               variant="secondary"
-              className="border-white/50 text-white hover:bg-white hover:text-brand-night"
+              className="border-white/50 text-white hover:bg-white hover:text-amp-ink"
             >
               See How We Work
             </Button>
@@ -89,11 +89,11 @@ export default function Hero() {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.38, ease: "easeOut" }}
-            className="mt-8 grid gap-3 text-xs uppercase tracking-[0.22em] text-brand-cream/60 sm:mt-10 sm:flex sm:flex-wrap sm:gap-5 sm:text-sm"
+            className="mt-8 grid gap-3 text-xs uppercase tracking-[0.22em] text-white/60 sm:mt-10 sm:flex sm:flex-wrap sm:gap-5 sm:text-sm"
           >
             {capabilityMarks.map((signal) => (
               <div key={signal} className="flex items-center gap-2.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-red-light" />
+                <span className="h-1.5 w-1.5 rounded-full bg-amp-red" />
                 <span className="font-semibold">{signal}</span>
               </div>
             ))}
@@ -106,7 +106,7 @@ export default function Hero() {
             className="mt-16 flex items-end lg:hidden"
           >
             <div className="w-full border-t border-white/18 pt-6">
-              <p className="text-xs uppercase tracking-[0.24em] text-brand-cream/52">
+              <p className="text-xs uppercase tracking-[0.24em] text-white/52">
                 You do not need another prompt. You need a build that holds up.
               </p>
             </div>
@@ -122,16 +122,16 @@ export default function Hero() {
           <div className="relative w-full max-w-md">
             <div className="absolute inset-x-0 top-10 h-px bg-white/18" />
             <div className="ml-auto w-[88%]">
-              <div className="display-type text-right text-[8.4rem] leading-[0.82] text-brand-cream/14">
+              <div className="display-type text-right text-[8.4rem] leading-[0.82] text-white/14">
                 DEMO
                 <br />
                 PRODUCT
               </div>
               <div className="-mt-4 border-l border-white/18 pl-6">
-                <p className="text-sm uppercase tracking-[0.24em] text-brand-cream/48">
+                <p className="text-sm uppercase tracking-[0.24em] text-white/48">
                   The hard part starts after the demo works.
                 </p>
-                <p className="mt-3 max-w-xs text-lg leading-relaxed text-brand-cream/78">
+                <p className="mt-3 max-w-xs text-lg leading-relaxed text-white/78">
                   We turn the rough version into the version you can show,
                   launch, own, and keep improving.
                 </p>
