@@ -3,10 +3,25 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import Button from "@/components/ui/Button";
+
+const navLinks = [
+  { href: "/services", label: "Services" },
+  { href: "/work", label: "How We Work" },
+  { href: "/about", label: "About" },
+];
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const linkClass = (href: string) =>
+    `text-sm font-medium transition-colors ${
+      pathname === href
+        ? "amp-bolt-bar text-white"
+        : "text-white/72 hover:text-white"
+    }`;
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-amp-ink/80 text-white backdrop-blur-xl">
@@ -24,24 +39,16 @@ export default function Nav() {
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
-            <Link
-              href="/services"
-              className="text-sm font-medium text-white/72 transition-colors hover:text-white"
-            >
-              Services
-            </Link>
-            <Link
-              href="/work"
-              className="text-sm font-medium text-white/72 transition-colors hover:text-white"
-            >
-              How We Work
-            </Link>
-            <Link
-              href="/about"
-              className="text-sm font-medium text-white/72 transition-colors hover:text-white"
-            >
-              About
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={pathname === link.href ? "page" : undefined}
+                className={linkClass(link.href)}
+              >
+                {link.label}
+              </Link>
+            ))}
             <Button
               href="/contact"
               variant="primary"
@@ -73,27 +80,17 @@ export default function Nav() {
         {menuOpen && (
           <div className="border-t border-white/10 py-6 md:hidden">
             <nav className="flex flex-col gap-5">
-              <Link
-                href="/services"
-                className="text-sm font-medium text-white/72"
-                onClick={() => setMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                href="/work"
-                className="text-sm font-medium text-white/72"
-                onClick={() => setMenuOpen(false)}
-              >
-                How We Work
-              </Link>
-              <Link
-                href="/about"
-                className="text-sm font-medium text-white/72"
-                onClick={() => setMenuOpen(false)}
-              >
-                About
-              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={pathname === link.href ? "page" : undefined}
+                  className={linkClass(link.href)}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
               <div>
                 <Button
                   href="/contact"

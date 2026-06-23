@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Check } from "lucide-react";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const outcomes = [
@@ -22,27 +23,6 @@ const outcomes = [
   },
 ];
 
-function CheckIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden="true"
-      className="flex-shrink-0 text-amp-red"
-    >
-      <path
-        d="M2.5 8.5l3.5 3.5 7.5-8"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 export default function Success() {
   return (
     <SectionWrapper>
@@ -52,7 +32,7 @@ export default function Success() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
+        <p className="amp-eyebrow mb-4">
           Success
         </p>
         <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-amp-ink sm:text-[4.3rem] md:text-[5.2rem]">
@@ -75,8 +55,8 @@ export default function Success() {
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
               className="flex items-start gap-4"
             >
-              <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-amp-red/10">
-                <CheckIcon />
+              <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-amp-red/10">
+                <Check size={16} strokeWidth={2.5} className="flex-shrink-0 text-amp-red" aria-hidden />
               </div>
               <div>
                 <h3 className="mb-1 text-lg font-bold leading-snug text-amp-ink">

@@ -31,7 +31,7 @@ export default function Guide() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
+        <p className="amp-eyebrow mb-4">
           Why AmpTech
         </p>
 
@@ -68,7 +68,7 @@ export default function Guide() {
               transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
               className="section-rule pt-5"
             >
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amp-red">
+              <p className="amp-eyebrow mb-3">
                 {feature.title}
               </p>
               <p className="text-base leading-relaxed text-[var(--fg2)]">

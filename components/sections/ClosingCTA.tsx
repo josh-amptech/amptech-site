@@ -14,7 +14,7 @@ export default function ClosingCTA() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="max-w-4xl"
         >
-          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red/80">
+          <p className="amp-eyebrow mb-6">
             Ready To Build
           </p>
           <h2 className="display-type mb-6 text-[3.7rem] leading-[0.92] text-white sm:text-[5rem] md:text-[6.4rem]">

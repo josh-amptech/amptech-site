@@ -30,7 +30,7 @@ export default function ServicesPage() {
   return (
     <SectionWrapper>
       <div className="max-w-5xl">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
+        <p className="amp-eyebrow mb-4">
           Services
         </p>
         <h1 className="display-type max-w-4xl text-[3.5rem] leading-[0.92] text-amp-ink sm:text-[4.7rem] md:text-[5.8rem]">
@@ -49,7 +49,7 @@ export default function ServicesPage() {
         <div className="mt-16 grid gap-5 border-t border-black/10 pt-8 md:grid-cols-2">
           {serviceAreas.map((service) => (
             <div key={service.title} className="section-rule pt-5">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amp-red">
+              <p className="amp-eyebrow mb-3">
                 {service.title}
               </p>
               <p className="text-base leading-relaxed text-[var(--fg2)]">
@@ -60,7 +60,7 @@ export default function ServicesPage() {
         </div>
 
         <div className="mt-16 border-t border-black/10 pt-8">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-amp-red">
+          <p className="amp-eyebrow mb-4">
             Engagement Model
           </p>
           <div className="max-w-3xl space-y-4 text-base leading-relaxed text-[var(--fg2)]">

@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <SectionWrapper>
       <div className="max-w-2xl">
-        <p className="text-sm font-medium uppercase tracking-wide text-amp-red mb-4">
+        <p className="amp-eyebrow mb-4">
           About
         </p>
         <h1 className="display-type text-[3.5rem] leading-[0.92] text-amp-ink mb-6 sm:text-[4.7rem] md:text-[5.8rem]">
@@ -43,9 +43,9 @@ export default function AboutPage() {
             What You Can Expect
           </p>
           <p className="text-base text-[var(--fg2)] leading-relaxed mb-4">
-            20+ years of professional software development experience, direct
-            communication, transparent scoping, and references from people who
-            have worked with us directly.
+            <span className="amp-metric">20+ years</span> of professional
+            software development experience, direct communication, transparent
+            scoping, and references from people who have worked with us directly.
           </p>
           <p className="text-base text-[var(--fg2)] leading-relaxed">
             The goal is simple: help you get from stuck build to real software

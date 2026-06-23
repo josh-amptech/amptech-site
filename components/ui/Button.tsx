@@ -13,7 +13,7 @@ const variantClasses: Record<Variant, string> = {
 };
 
 const base =
-  "inline-flex cursor-pointer items-center justify-center rounded-md px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] transition-all duration-200";
+  "inline-flex cursor-pointer items-center justify-center rounded-md px-6 py-3 text-sm font-semibold tracking-[0.01em] transition-all duration-200";
 
 type LinkButtonProps = {
   variant?: Variant;
