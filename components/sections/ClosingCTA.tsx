@@ -15,20 +15,16 @@ export default function ClosingCTA() {
           className="max-w-4xl"
         >
           <p className="amp-eyebrow mb-6">
-            Ready To Build
+            Ready when you are
           </p>
           <h2 className="display-type mb-6 text-[3.7rem] leading-[0.92] text-white sm:text-[5rem] md:text-[6.4rem]">
-            READY TO
+            Ready to get this
             <br />
-            GET THIS
-            <br />
-            ACROSS
-            <br />
-            THE LINE?
+            across the line?
           </h2>
           <p className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300">
-            Bring the rough build, the stuck prototype, or the idea you cannot
-            stop thinking about. We will help you find the next real step.
+            Bring the stuck prototype, the rough build, or the idea you can&apos;t
+            stop thinking about. We&apos;ll help you find the next move.
           </p>
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <Button

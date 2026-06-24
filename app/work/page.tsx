@@ -12,14 +12,14 @@ const proofBlocks = [
     title: "Experience",
     body: (
       <>
-        <span className="amp-metric">20+ years</span> of professional software
-        development across real products, real users, and real delivery pressure.
+        <span className="amp-metric">20+ years</span> of building production
+        software that teams actually depend on.
       </>
     ),
   },
   {
     title: "References",
-    body: "We can provide references from people who have worked with us directly so you can hear how we operate from someone besides us.",
+    body: "We'll connect you with people we've actually worked with, so you hear how we operate from someone other than us.",
   },
 ];
 
@@ -31,18 +31,16 @@ export default function WorkPage() {
           How We Work
         </p>
         <h1 className="display-type max-w-4xl text-[3.5rem] leading-[0.92] text-amp-ink sm:text-[4.7rem] md:text-[5.8rem]">
-          HOW TO
+          How to tell if
           <br />
-          TELL IF
+          the build
           <br />
-          THE BUILD
-          <br />
-          CAN WORK.
+          can work.
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--fg2)]">
-          If you are deciding whether AmpTech is the right fit, start here. The
-          right partner should make the project clearer before they ask you to
-          commit to the build.
+          If you&apos;re deciding whether AmpTech is the right fit, start here. A
+          good partner makes the project clearer before asking you to commit to a
+          build.
         </p>
 
         <div className="mt-16 grid gap-5 border-t border-black/10 pt-8 md:grid-cols-2">
@@ -65,12 +63,12 @@ export default function WorkPage() {
           <div className="max-w-3xl space-y-4 text-base leading-relaxed text-[var(--fg2)]">
             <p>
               You should know what can be kept, what needs rebuilding, what the
-              tradeoffs are, and who is making the technical decisions before
+              tradeoffs are, and who&apos;s making the technical decisions before
               development begins.
             </p>
             <p>
-              You should leave with the code, the infrastructure, and the
-              documentation you need to keep moving after launch.
+              When it&apos;s done, you&apos;ll have everything you need to keep
+              moving — and no reason to call us unless you want to.
             </p>
           </div>
         </div>

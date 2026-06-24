@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 export const metadata = {
   title: "Services — AmpTech",
   description:
-    "How AmpTech turns rough prototypes, stalled builds, and app ideas into software people can use.",
+    "How AmpTech turns a stalled AI build into software that holds up in production.",
 };
 
 const serviceAreas = [
@@ -34,16 +34,15 @@ export default function ServicesPage() {
           Services
         </p>
         <h1 className="display-type max-w-4xl text-[3.5rem] leading-[0.92] text-amp-ink sm:text-[4.7rem] md:text-[5.8rem]">
-          FROM STUCK
+          From stuck
           <br />
-          TO SHIPPED,
+          to shipped,
           <br />
-          DONE RIGHT.
+          done right.
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--fg2)]">
-          AmpTech helps founders and business owners turn rough prototypes,
-          stalled AI builds, and app ideas into software that holds up under
-          real use.
+          You&apos;ve got a prototype that demos well but isn&apos;t ready for
+          production. We take it the rest of the way — and hand it over.
         </p>
 
         <div className="mt-16 grid gap-5 border-t border-black/10 pt-8 md:grid-cols-2">
@@ -66,14 +65,14 @@ export default function ServicesPage() {
           <div className="max-w-3xl space-y-4 text-base leading-relaxed text-[var(--fg2)]">
             <p>
               Every engagement starts with a discovery call. If the build is a
-              fit, the next step is scoped planning so you know what can be
-              kept, what needs work, how long it should take, and what it will
+              fit, the next step is scoped planning, so you know what can be
+              kept, what needs work, how long it should take, and what it&apos;ll
               cost before development begins.
             </p>
             <p>
-              AmpTech bills hourly against a scoped plan. The point is
-              visibility: you know what is happening before the work starts and
-              as it moves forward.
+              We bill hourly against a scoped plan. The point is visibility: you
+              know what&apos;s happening before the work starts and as it moves
+              forward.
             </p>
           </div>
         </div>

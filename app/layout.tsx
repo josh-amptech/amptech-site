@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AmpTech — From Stuck Demo To Real Product",
+  title: "AmpTech — From Stuck Demo to Shipped Product",
   description:
     "AmpTech helps founders and business owners turn rough prototypes, stalled AI builds, and app ideas into software people can actually use.",
 };

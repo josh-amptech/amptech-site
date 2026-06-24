@@ -13,35 +13,35 @@ export default function Problem() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="amp-eyebrow mb-8">
-            The Problem
+            Where builds stall
           </p>
 
           <div className="section-rule grid gap-12 pt-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
             <div className="max-w-3xl">
               <p className="display-type text-[3.7rem] leading-[0.92] text-amp-ink sm:text-[5rem] md:text-[6.4rem]">
-                THE DEMO
+                The demo worked.
                 <br />
-                WORKED.
-                <br />
-                THEN REALITY
-                <br />
-                SHOWED UP.
+                Then reality showed up.
               </p>
             </div>
 
             <div className="space-y-6 pt-2">
               <p className="text-lg leading-relaxed text-[var(--fg2)]">
-                You got a screen on the page. Maybe a workflow clicked through.
-                Maybe it even felt like the product was almost there.
+                You got a screen on the page. A workflow clicked through. It
+                even felt like the product was almost there.
               </p>
               <p className="text-lg leading-relaxed text-[var(--fg2)]">
-                Then the hidden work started. Authentication broke. Data did
-                not save cleanly. Edge cases piled up. The AI kept changing the
-                same files and the project stopped getting closer to launch.
+                Then the hidden work showed up. Auth broke. Data didn&apos;t save
+                cleanly. Edge cases piled up. The AI kept rewriting the same
+                files, and every fix spawned two new bugs.
+              </p>
+              <p className="text-lg leading-relaxed text-[var(--fg2)]">
+                Now it&apos;s months in, and you honestly can&apos;t tell if
+                you&apos;re almost done or about to start over.
               </p>
               <p className="text-sm uppercase tracking-[0.24em] text-amp-steel">
-                The gap between promising and launch-ready is where most builds
-                stall.
+                Left alone, that&apos;s how promising builds die — quietly, in a
+                repo no one opens again.
               </p>
             </div>
           </div>

@@ -16,21 +16,21 @@ export default function AboutPage() {
           About
         </p>
         <h1 className="display-type text-[3.5rem] leading-[0.92] text-amp-ink mb-6 sm:text-[4.7rem] md:text-[5.8rem]">
-          THE HELP
+          The help
           <br />
-          BEHIND THE
+          behind the
           <br />
-          BUILD.
+          build.
         </h1>
         <p className="text-lg text-[var(--fg2)] leading-relaxed mb-6">
           AmpTech was founded for the moment when a promising build stops
           moving. The demo exists. The idea is still strong. But the project
-          needs experienced engineering to become something real users can rely
-          on.
+          needs experienced engineering to become something people can actually
+          rely on.
         </p>
         <p className="text-base text-[var(--fg2)] leading-relaxed mb-6">
           We work with founders and business owners who have momentum, clarity,
-          and a real product vision, but need help getting from rough version to
+          and a clear product vision, but need help getting from rough build to
           launch-ready software.
         </p>
         <p className="text-base text-[var(--fg2)] leading-relaxed mb-10">
@@ -45,18 +45,18 @@ export default function AboutPage() {
           <p className="text-base text-[var(--fg2)] leading-relaxed mb-4">
             <span className="amp-metric">20+ years</span> of professional
             software development experience, direct communication, transparent
-            scoping, and references from people who have worked with us directly.
+            scoping, and references from people we&apos;ve worked with directly.
           </p>
           <p className="text-base text-[var(--fg2)] leading-relaxed">
-            The goal is simple: help you get from stuck build to real software
-            without having to become a developer yourself.
+            The goal is simple: help you get from a stuck build to working
+            software without having to become a developer yourself.
           </p>
         </div>
         <div className="flex flex-wrap gap-3 mb-10">
           <Badge>20+ Years Engineering Experience</Badge>
           <Badge>AI-Assisted Development</Badge>
           <Badge>Transparent Scoping</Badge>
-          <Badge>You Own Everything</Badge>
+          <Badge>Direct Communication</Badge>
         </div>
         <Button href="/contact" variant="primary">
           Book A Discovery Call

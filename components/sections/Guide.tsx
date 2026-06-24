@@ -5,8 +5,8 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const features = [
   {
-    title: "Find the real blockers",
-    description: "We separate surface bugs from architecture problems so the project stops moving in circles.",
+    title: "Find what's actually broken",
+    description: "We separate surface bugs from architecture problems, so the project stops going in circles.",
   },
   {
     title: "Build what has to hold",
@@ -32,28 +32,24 @@ export default function Guide() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <p className="amp-eyebrow mb-4">
-          Why AmpTech
+          How we help
         </p>
 
         <div className="grid gap-12 border-t border-black/10 pt-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
           <div>
             <p className="display-type max-w-3xl text-[3.3rem] leading-[0.92] text-amp-ink sm:text-[4.4rem] md:text-[5.5rem]">
-              YOU NEED
+              You need someone
               <br />
-              SOMEONE WHO
+              who&apos;s shipped
               <br />
-              CAN GET IT
-              <br />
-              ACROSS
-              <br />
-              THE LINE.
+              this before.
             </p>
           </div>
           <div>
             <p className="text-lg leading-relaxed text-[var(--fg2)]">
-              AmpTech brings senior engineering judgment to the messy middle of
-              a build: the point where a prototype exists, but the product is
-              not stable enough to sell, demo, or depend on.
+              We bring senior engineering judgment to the messy middle — where a
+              prototype exists but isn&apos;t stable enough to sell, demo, or
+              depend on.
             </p>
           </div>
         </div>

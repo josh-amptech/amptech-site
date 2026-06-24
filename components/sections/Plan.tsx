@@ -7,17 +7,17 @@ const steps = [
   {
     number: "01",
     title: "Show us where it stands",
-    body: "Bring the idea, prototype, repo, screenshots, or rough build. We will meet you where the project is.",
+    body: "Bring the prototype, the repo, or the rough build. We'll meet you where the project actually is.",
   },
   {
     number: "02",
     title: "Get a clear build plan",
-    body: "We identify what can be kept, what needs rebuilding, what it will take, and what should happen first.",
+    body: "We tell you what's worth keeping, what needs rebuilding, what it'll take, and what to do first.",
   },
   {
     number: "03",
-    title: "Launch with ownership",
-    body: "You get working software, deployment support, documentation, and the code in your hands.",
+    title: "Go live",
+    body: "You ship working software with deployment support and documentation, and a codebase you can keep building on.",
   },
 ];
 
@@ -31,14 +31,14 @@ export default function Plan() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <p className="amp-eyebrow mb-4">
-          The Plan
+          How it goes
         </p>
         <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-white sm:text-[4.4rem] md:text-[5.4rem]">
-          A SIMPLE PATH
+          A simple path
           <br />
-          FROM STUCK
+          from stuck
           <br />
-          TO SHIPPED.
+          to shipped.
         </h2>
 
         <div className="grid gap-10 border-t border-white/14 pt-10 md:grid-cols-3 md:gap-8">
