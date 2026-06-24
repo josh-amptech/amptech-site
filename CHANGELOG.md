@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/josh-amptech/amptech-site/compare/v1.6.0...v1.7.0) (2026-06-24)
+
+
+### Features
+
+* StoryBrand copy rewrite + human voice ([#32](https://github.com/josh-amptech/amptech-site/issues/32)) ([00769f4](https://github.com/josh-amptech/amptech-site/commit/00769f42ad349a5f9f1e6a7af6a05507d5f69b75)), closes [#19](https://github.com/josh-amptech/amptech-site/issues/19) [#28](https://github.com/josh-amptech/amptech-site/issues/28) [#19](https://github.com/josh-amptech/amptech-site/issues/19) [#25](https://github.com/josh-amptech/amptech-site/issues/25)
+
 # [1.6.0](https://github.com/josh-amptech/amptech-site/compare/v1.5.0...v1.6.0) (2026-06-23)
 
 
