@@ -11,6 +11,12 @@ npm run build
 npm run lint
 ```
 
+**Verifying UI changes:**
+- Check at desktop width **≥1024px** — the preview screenshot defaults to ~800px
+  and misses the `lg:` breakpoint (a hero overflow once passed narrow-width checks).
+- If `globals.css` edits don't show, restart `npm run dev` or delete `.next` —
+  Turbopack can serve stale compiled CSS.
+
 ## Tech Stack
 
 | Layer | Choice | Notes |
@@ -193,6 +199,10 @@ Examples: `feat: add contact form validation`, `fix: nav mobile menu close on ro
    unicode glyph icons (▶ ★ ✓) — use `play` / `star` / `check`.
 9. No `<img>` — always `next/image`. No inline styles. No UI libraries
    (shadcn, MUI, Chakra) — Tailwind only. Mobile-first. Umami analytics only.
+10. **Tailwind v4 layering.** Keep base element styles (`a`, `body`,
+    `::selection`) inside `@layer base` in `globals.css`. Unlayered rules beat
+    `@layer utilities` regardless of specificity — an unlayered `a {color}`
+    overrode `text-white` on every link-button (invisible red-on-red CTA).
 
 ## Environment Variables
 
