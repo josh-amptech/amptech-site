@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/josh-amptech/amptech-site/compare/v1.7.0...v1.7.1) (2026-06-24)
+
+
+### Bug Fixes
+
+* scale down hero headline so it fits the viewport ([#33](https://github.com/josh-amptech/amptech-site/issues/33)) ([#34](https://github.com/josh-amptech/amptech-site/issues/34)) ([4d60d38](https://github.com/josh-amptech/amptech-site/commit/4d60d3828280f4e0d9dba8931081b6d82a1d67a0))
+
 # [1.7.0](https://github.com/josh-amptech/amptech-site/compare/v1.6.0...v1.7.0) (2026-06-24)
 
 
