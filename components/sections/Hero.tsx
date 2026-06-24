@@ -39,7 +39,7 @@ export default function Hero() {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.12, ease: "easeOut" }}
-            className="display-type max-w-4xl text-[3.35rem] leading-[0.9] text-white sm:text-[6rem] md:text-[7.8rem] lg:text-[8.8rem]"
+            className="display-type max-w-4xl text-[3.1rem] leading-[0.95] text-white sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem]"
           >
             You built the demo.
             <br />
