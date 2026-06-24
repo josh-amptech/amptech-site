@@ -16,7 +16,7 @@ export default function Footer() {
               className="h-7 w-auto brightness-0 invert"
             />
             <p className="text-sm text-gray-400 mt-2">
-              From stuck prototype to real product.
+              From stuck prototype to production.
             </p>
           </div>
 

@@ -6,20 +6,20 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const outcomes = [
   {
-    headline: "A product you can put in front of people.",
-    body: "Not a demo that only works when everything goes exactly right.",
+    headline: "You can put it in front of anyone.",
+    body: "Investors, customers, your board — not a happy-path demo that only works when everything goes right.",
   },
   {
-    headline: "A build that stops drifting.",
+    headline: "You stop going in circles.",
     body: "Clear priorities, fewer loops, and progress you can actually measure.",
   },
   {
-    headline: "Ownership without a trap door.",
-    body: "The code is yours. The infrastructure is yours. The direction is clear.",
+    headline: "You can finally sell it.",
+    body: "It holds up under load and edge cases, not just the path you click through in a demo.",
   },
   {
-    headline: "Something you can keep improving.",
-    body: "Documented, handed over cleanly, and built to move after launch.",
+    headline: "You can keep building without us.",
+    body: "Documented and handed over cleanly, so your next developer picks up right where we left off.",
   },
 ];
 
@@ -33,16 +33,14 @@ export default function Success() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <p className="amp-eyebrow mb-4">
-          Success
+          After we ship
         </p>
         <h2 className="display-type mb-14 max-w-4xl text-[3.3rem] leading-[0.92] text-amp-ink sm:text-[4.3rem] md:text-[5.2rem]">
-          WHAT CHANGES
+          What changes
           <br />
-          WHEN THE
+          once you
           <br />
-          PRODUCT IS
-          <br />
-          REAL.
+          can ship.
         </h2>
 
         <div className="grid gap-8 border-t border-black/10 pt-10 sm:grid-cols-2">

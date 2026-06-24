@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored design-system skill assets (reference kit, not app source).
+    // Flat config doesn't auto-ignore dot-dirs, so these need to be explicit.
+    ".agents/**",
+    ".claude/**",
   ]),
 ]);
 

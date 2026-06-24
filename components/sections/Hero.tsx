@@ -5,8 +5,8 @@ import Button from "@/components/ui/Button";
 
 const capabilityMarks = [
   "Stalled AI builds",
-  "Founder-led products",
-  "Launch-ready handoff",
+  "Prototype to production",
+  "Senior engineering",
 ];
 
 export default function Hero() {
@@ -41,13 +41,9 @@ export default function Hero() {
             transition={{ duration: 0.75, delay: 0.12, ease: "easeOut" }}
             className="display-type max-w-4xl text-[3.35rem] leading-[0.9] text-white sm:text-[6rem] md:text-[7.8rem] lg:text-[8.8rem]"
           >
-            YOU HAVE
+            You built the demo.
             <br />
-            A DEMO.
-            <br />
-            NOW BUILD
-            <br />
-            <span className="text-amp-red">THE PRODUCT.</span>
+            <span className="text-amp-red">We build the product.</span>
           </motion.h1>
 
           <motion.p
@@ -56,9 +52,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.22, ease: "easeOut" }}
             className="mt-6 max-w-2xl text-base leading-relaxed text-white/82 sm:text-lg"
           >
-            AmpTech helps founders and business owners turn promising AI builds,
-            rough prototypes, and half-finished app ideas into software people
-            can actually use.
+            You got a working prototype out of Replit, Bolt, Lovable, or Cursor.
+            We turn it into software that holds up when real users show up — and
+            hand you the keys.
           </motion.p>
 
           <motion.div
@@ -107,7 +103,7 @@ export default function Hero() {
           >
             <div className="w-full border-t border-white/18 pt-6">
               <p className="text-xs uppercase tracking-[0.24em] text-white/52">
-                You do not need another prompt. You need a build that holds up.
+                You don&apos;t need another prompt. You need a build that holds up.
               </p>
             </div>
           </motion.div>
@@ -132,8 +128,8 @@ export default function Hero() {
                   The hard part starts after the demo works.
                 </p>
                 <p className="mt-3 max-w-xs text-lg leading-relaxed text-white/78">
-                  We turn the rough version into the version you can show,
-                  launch, own, and keep improving.
+                  We turn the rough version into one you can launch, sell, and
+                  build on.
                 </p>
               </div>
             </div>

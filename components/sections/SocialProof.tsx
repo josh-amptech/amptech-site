@@ -10,8 +10,8 @@ const proofPoints: ReactNode[] = [
     <span className="amp-metric">20+ years</span> building software beyond the
     prototype stage
   </>,
-  "References from people who have worked with us directly",
-  "A scoping process that tells you what is real before you commit",
+  "References from people we've actually worked with",
+  "A scoping process that shows you what's worth keeping before you commit",
 ];
 
 export default function SocialProof() {
@@ -26,15 +26,15 @@ export default function SocialProof() {
         <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
           <div className="max-w-xl">
             <p className="amp-eyebrow mb-4">
-              Confidence
+              Before you commit
             </p>
             <h2 className="display-type mb-4 text-[3rem] leading-[0.92] text-amp-ink sm:text-[3.9rem] md:text-[4.6rem]">
               Look before you book.
             </h2>
             <p className="text-lg leading-relaxed text-[var(--fg2)]">
-              You should not have to trust a big claim on a small website. You
-              should be able to see how we think, how we scope, and what kind
-              of work we can carry across the finish line.
+              You shouldn&apos;t have to trust a big claim on a small website.
+              You should be able to see how we think, how we scope, and the kind
+              of work we take to launch.
             </p>
             <div className="mt-10 space-y-5 border-t border-black/10 pt-6">
               {proofPoints.map((point, i) => (
