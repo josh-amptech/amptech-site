@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Logo — Primary Lockup" subtitle="Horizontal lockup on light and dark" viewport="700x200" -->
+<html><head><meta charset="utf-8"><title>Logo — Primary Lockup</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  .frame { padding: 20px 24px; font-family: var(--font-body); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .plate { border: 1px solid var(--border); border-radius: var(--r-3); padding: 22px; display:flex; align-items:center; justify-content:center; height: 130px; }
+  .plate.dark { background: var(--amp-ink); border-color: #2A2D33; }
+  .plate img { max-height: 64px; max-width: 100%; object-fit: contain; }
+  .cap { margin-top: 8px; font-size: 11px; color: var(--fg3); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+  .col { display:flex; flex-direction:column; }
+</style></head>
+<body>
+<div class="frame">
+  <div class="row">
+    <div class="col">
+      <div class="plate"><img src="../assets/svg/logo-horizontal.svg" alt="AmpTech horizontal"></div>
+      <div class="cap">Horizontal · Transparent</div>
+    </div>
+    <div class="col">
+      <div class="plate dark"><img src="../assets/svg/logo-horizontal-white-transparent.svg" alt="AmpTech horizontal white"></div>
+      <div class="cap">Horizontal · White on Dark</div>
+    </div>
+  </div>
+</div>
+</body></html>

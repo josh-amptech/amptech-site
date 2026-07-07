@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Brand — Eyebrow & Bolt Bar" subtitle="Signature micro-elements" viewport="700x240" -->
+<html><head><meta charset="utf-8"><title>Eyebrow & Bolt-Bar</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  .frame { padding: 22px 24px; font-family: var(--font-body); display:flex; flex-direction:column; gap: 18px; }
+  .box { display:flex; flex-direction:column; gap: 8px; }
+  .bolt { position:relative; padding-left: 14px; }
+  .bolt::before { content:""; position:absolute; left:0; top:4px; bottom:4px; width:3px; background: var(--amp-red); }
+  .cap { font-family: var(--font-mono); font-size: 10px; color: var(--fg3); }
+</style></head>
+<body>
+<div class="frame">
+  <div class="box">
+    <div><span class="amp-eyebrow">How we work</span></div>
+    <h3 style="margin:0;">Senior engineering, on tap.</h3>
+    <div class="cap">.amp-eyebrow — tracked 14%, 18px red bar, ALL CAPS 12px</div>
+  </div>
+  <div class="box bolt">
+    <h3 style="margin:0;">"They shipped what three agencies couldn't."</h3>
+    <p style="margin:0; color: var(--fg2); font-size: 14px;">— Founder, Series A AI startup</p>
+    <div class="cap">.amp-bolt-bar — vertical 3px red edge, callouts/quotes only</div>
+  </div>
+</div>
+</body></html>

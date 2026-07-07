@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Logo — Marks & Stacked" subtitle="Mark-only and stacked variants" viewport="700x180" -->
+<html><head><meta charset="utf-8"><title>Logo — Mark & Stacked</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  .frame { padding: 20px 24px; font-family: var(--font-body); }
+  .row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
+  .plate { border: 1px solid var(--border); border-radius: var(--r-3); padding: 16px; display:flex; align-items:center; justify-content:center; height: 110px; }
+  .plate.dark { background: var(--amp-ink); border-color: #2A2D33; }
+  .plate img { max-height: 72px; max-width: 100%; object-fit: contain; }
+  .cap { margin-top: 6px; font-size: 10px; color: var(--fg3); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; text-align:center; }
+</style></head>
+<body>
+<div class="frame">
+  <div class="row">
+    <div><div class="plate"><img src="../assets/svg/mark-red.svg" alt="mark"></div><div class="cap">Mark · Red</div></div>
+    <div><div class="plate"><img src="../assets/svg/logo-stacked.svg" alt="stacked"></div><div class="cap">Stacked · Duotone</div></div>
+    <div><div class="plate dark"><img src="../assets/svg/logo-stacked-white-transparent.svg" alt="stacked white"></div><div class="cap">Stacked · White</div></div>
+    <div><div class="plate dark"><img src="../assets/svg/mark-red.svg" alt="mark dark"></div><div class="cap">Mark · On Dark</div></div>
+  </div>
+</div>
+</body></html>

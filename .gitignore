@@ -40,8 +40,11 @@ yarn-error.log*
 amplify_outputs.json
 .amplify-hosting
 
-# Claude Code
-.claude/
+# Claude Code (local config/permissions stay ignored; the brand guide is source of truth and is tracked)
+.claude/*
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/amptech-design/
 
 # typescript
 *.tsbuildinfo

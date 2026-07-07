@@ -88,9 +88,11 @@ disagree, the skill wins — fix this file.
   **JetBrains Mono** (metrics/code). Loaded via `next/font/google` in
   `app/layout.tsx`, bound to `--font-space-grotesk` / `--font-inter` /
   `--font-jetbrains`. **Not Montserrat. Not Bebas Neue.**
-- **Brand red `#D41E10`** and **steel gray `#4D4D4D`** are the only brand chromatics.
-  Red is an accent — one focal point per view (CTA, active state, key metric).
-  Never a large background fill.
+- **Brand red `#D41E10`** and **steel gray `#4D4D4D`** are the only brand chromatics
+  (dark surfaces use the skill's red ramp: `--amp-red-hot`, `--amp-red-bright`).
+- **Red policy: one solid-red primary action per view** — the page's direct CTA.
+  Thin red micro-accents (eyebrows, bolt-bars, links, active nav) don't count.
+  Never a large background fill. Destructive actions are outline-red, never solid.
 
 ### Non-negotiables
 
@@ -116,6 +118,11 @@ Senior engineer at a whiteboard: calm, specific, zero hype. **"You"** is the
 founder with a prototype; **"we"** is AmpTech (the guide, not the hero). Lead
 with the reader's outcome, not the technology. Short sentences, active voice,
 contractions OK. One dry aside per page is the ceiling.
+
+**Marketing copy follows the StoryBrand-based Messaging Framework** in the
+skill's README (BrandScript, one-liner, anti-cheese guardrails). Pages map to
+the beats (Problem → Guide → Plan → Proof → Success → CTA); the framework's
+vocabulary ("hero," "guide," "journey") never appears in customer-facing copy.
 
 **Copy** is verbatim in `components/sections/` — do not rewrite unless asked.
 

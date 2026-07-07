@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Components — Form Inputs" subtitle="Inputs, select, textarea, focus/error/check" viewport="700x260" -->
+<html><head><meta charset="utf-8"><title>Form Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  .frame { padding: 22px 24px; font-family: var(--font-body); }
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { display:flex; flex-direction:column; gap: 6px; }
+  label { font-size: 12px; font-weight: 600; color: var(--fg2); }
+  input, select, textarea { font: inherit; font-size: 14px; padding: 10px 12px; border: 1px solid var(--border-strong); border-radius: var(--r-3); background: #fff; color: var(--fg1); outline: none; transition: all 120ms var(--ease-out); }
+  input:focus { border-color: var(--amp-red); box-shadow: var(--shadow-red-glow); }
+  .hint { font-size: 11px; color: var(--fg3); font-family: var(--font-mono); }
+  .err { font-size: 11px; color: var(--danger); }
+  .check { display:inline-flex; align-items:center; gap: 8px; font-size: 13px; color: var(--fg1); }
+  .check input { accent-color: var(--amp-red); width: 16px; height: 16px; padding: 0; }
+</style></head>
+<body>
+<div class="frame">
+  <div class="grid">
+    <div class="field"><label>Your project</label><input placeholder="e.g. customer-support copilot"><div class="hint">One line. No NDA required.</div></div>
+    <div class="field"><label>Stage</label><select><option>Working prototype</option><option>Early production</option><option>Scale pains</option></select></div>
+    <div class="field"><label>Focused state</label><input value="production-ready" style="border-color: var(--amp-red); box-shadow: var(--shadow-red-glow);"></div>
+    <div class="field"><label>Invalid</label><input value="demo@@ex" style="border-color: var(--danger);"><div class="err">We need a real email to route this.</div></div>
+    <div class="field" style="grid-column: 1/-1;"><label>Context</label><textarea rows="2" placeholder="What's breaking, what's flaky, what's scary."></textarea></div>
+    <label class="check" style="grid-column: 1/-1;"><input type="checkbox" checked> I've read the playbook and understand the process.</label>
+  </div>
+</div>
+</body></html>
